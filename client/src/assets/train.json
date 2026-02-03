@@ -1,0 +1,635 @@
+[
+
+  {
+    "trainNumber": "12601",
+    "trainName": "Pallavan SF Express",
+    "trainType": "Superfast",
+    "daysOfOperation": ["Su","Mo","Tu","We","Th","Fr","Sa"],
+    "stations": [
+      {"stationCode":"MAS","stationName":"Chennai Central","arrivalTime":null,"departureTime":"07:15","distance":0,"sequence":1,"isSource":true},
+      {"stationCode":"KPD","stationName":"Katpadi Junction","arrivalTime":"09:15","departureTime":"09:20","distance":130,"sequence":2},
+      {"stationCode":"TPJ","stationName":"Tiruchirapalli","arrivalTime":"13:00","departureTime":"13:05","distance":336,"sequence":3},
+      {"stationCode":"MDU","stationName":"Madurai Junction","arrivalTime":"15:30","departureTime":"15:35","distance":497,"sequence":4},
+      {"stationCode":"TEN","stationName":"Tirunelveli","arrivalTime":"18:15","departureTime":"18:20","distance":681,"sequence":5},
+      {"stationCode":"NCJ","stationName":"Nagercoil Junction","arrivalTime":"20:10","departureTime":"20:15","distance":780,"sequence":6},
+      {"stationCode":"CAPE","stationName":"Kanyakumari","arrivalTime":"21:45","departureTime":null,"distance":834,"sequence":7,"isDestination":true}
+    ],
+    "classes": [
+      {"classType":"Sleeper","farePerKm":1.28,"totalSeats":72},
+      {"classType":"AC 3 Tier","farePerKm":3.45,"totalSeats":64},
+      {"classType":"AC 2 Tier","farePerKm":5.55,"totalSeats":48}
+    ]},
+  {
+    "trainNumber": "16525",
+    "trainName": "Kanniyakumari Express",
+    "trainType": "Express",
+    "daysOfOperation": ["Su","Mo","Tu","We","Th","Fr","Sa"],
+    "stations": [
+      {"stationCode":"SBC","stationName":"Bengaluru City","arrivalTime":null,"departureTime":"20:00","distance":0,"sequence":1,"isSource":true},
+      {"stationCode":"ED","stationName":"Erode Junction","arrivalTime":"01:15","departureTime":"01:20","distance":400,"sequence":2},
+      {"stationCode":"TPJ","stationName":"Tiruchirapalli","arrivalTime":"04:30","departureTime":"04:35","distance":550,"sequence":3},
+      {"stationCode":"MDU","stationName":"Madurai Junction","arrivalTime":"07:15","departureTime":"07:20","distance":711,"sequence":4},
+      {"stationCode":"VPT","stationName":"Virudhunagar","arrivalTime":"08:30","departureTime":"08:35","distance":756,"sequence":5},
+      {"stationCode":"TEN","stationName":"Tirunelveli","arrivalTime":"10:45","departureTime":"10:50","distance":895,"sequence":6},
+      {"stationCode":"CAPE","stationName":"Kanyakumari","arrivalTime":"13:00","departureTime":null,"distance":948,"sequence":7,"isDestination":true}
+    ],
+    "classes": [
+      {"classType":"Sleeper","farePerKm":1.28,"totalSeats":72},
+      {"classType":"AC 3 Tier","farePerKm":3.45,"totalSeats":64}
+    ]},
+  {
+    "trainNumber": "12637",
+    "trainName": "Pearl City Express",
+    "trainType": "Superfast",
+    "daysOfOperation":["Su","Mo","Tu","We","Th","Fr","Sa"],
+    "stations": [
+      {"stationCode":"MS","stationName":"Chennai Egmore","arrivalTime":null,"departureTime":"21:30","distance":0,"sequence":1,"isSource":true},
+      {"stationCode":"VM","stationName":"Villupuram","arrivalTime":"23:45","departureTime":"23:50","distance":159,"sequence":2},
+      {"stationCode":"TPJ","stationName":"Tiruchirapalli","arrivalTime":"03:00","departureTime":"03:05","distance":336,"sequence":3},
+      {"stationCode":"DG","stationName":"Dindigul","arrivalTime":"04:30","departureTime":"04:35","distance":431,"sequence":4},
+      {"stationCode":"CBE","stationName":"Coimbatore","arrivalTime":"07:15","departureTime":"07:20","distance":580,"sequence":5},
+      {"stationCode":"TUP","stationName":"Tiruppur","arrivalTime":"08:10","departureTime":"08:15","distance":630,"sequence":6},
+      {"stationCode":"ED","stationName":"Erode Junction","arrivalTime":"09:15","departureTime":null,"distance":680,"sequence":7,"isDestination":true}
+    ],
+    "classes": [
+      {"classType":"Sleeper","farePerKm":1.28,"totalSeats":72},
+      {"classType":"AC 3 Tier","farePerKm":3.45,"totalSeats":64},
+      {"classType":"AC 2 Tier","farePerKm":5.55,"totalSeats":48}
+    ]},
+  {
+    "trainNumber": "12635",
+    "trainName": "Vaigai SF Express",
+    "trainType": "Superfast",
+    "daysOfOperation": ["Su","Mo","Tu","We","Th","Fr","Sa"],
+    "stations": [
+      {"stationCode":"MS","stationName":"Chennai Egmore","arrivalTime":null,"departureTime":"15:30","distance":0,"sequence":1,"isSource":true},
+      {"stationCode":"CGL","stationName":"Chengalpattu","arrivalTime":"16:28","departureTime":"16:30","distance":56,"sequence":2},
+      {"stationCode":"VM","stationName":"Villupuram","arrivalTime":"18:15","departureTime":"18:20","distance":159,"sequence":3},
+      {"stationCode":"TPJ","stationName":"Tiruchirapalli","arrivalTime":"21:30","departureTime":"21:35","distance":336,"sequence":4},
+      {"stationCode":"DG","stationName":"Dindigul","arrivalTime":"23:00","departureTime":"23:05","distance":431,"sequence":5},
+      {"stationCode":"MDU","stationName":"Madurai Junction","arrivalTime":"00:30","departureTime":"00:35","distance":497,"sequence":6},
+      {"stationCode":"TEN","stationName":"Tirunelveli","arrivalTime":"03:15","departureTime":null,"distance":681,"sequence":7,"isDestination":true}
+    ],
+    "classes": [
+      {"classType":"Sleeper","farePerKm":1.28,"totalSeats":72},
+      {"classType":"AC 3 Tier","farePerKm":3.45,"totalSeats":64},
+      {"classType":"AC 2 Tier","farePerKm":5.55,"totalSeats":48}
+    ]},
+  {
+    "trainNumber": "12647",
+    "trainName": "Cholan SF Express",
+    "trainType": "Superfast",
+    "daysOfOperation": ["Su","Mo","Tu","We","Th","Fr","Sa"],
+    "stations": [
+      {"stationCode":"TPJ","stationName":"Tiruchirapalli","arrivalTime":null,"departureTime":"06:15","distance":0,"sequence":1,"isSource":true},
+      {"stationCode":"SRGM","stationName":"Srirangam","arrivalTime":"06:35","departureTime":"06:37","distance":10,"sequence":2},
+      {"stationCode":"ALP","stationName":"Ariyalur","arrivalTime":"07:38","departureTime":"07:40","distance":76,"sequence":3},
+      {"stationCode":"VRI","stationName":"Vridhachalam","arrivalTime":"08:33","departureTime":"08:35","distance":132,"sequence":4},
+      {"stationCode":"VM","stationName":"Villupuram","arrivalTime":"09:45","departureTime":"09:50","distance":177,"sequence":5},
+      {"stationCode":"CGL","stationName":"Chengalpattu","arrivalTime":"11:43","departureTime":"11:45","distance":280,"sequence":6},
+      {"stationCode":"MAS","stationName":"Chennai Central","arrivalTime":"13:15","departureTime":null,"distance":336,"sequence":7,"isDestination":true}
+    ],
+    "classes": [
+      {"classType":"Sleeper","farePerKm":1.28,"totalSeats":72},
+      {"classType":"AC 3 Tier","farePerKm":3.45,"totalSeats":64},
+      {"classType":"AC 2 Tier","farePerKm":5.55,"totalSeats":48}
+    ]},
+  {
+    "trainNumber": "12653",
+    "trainName": "Bangalore SF Express",
+    "trainType": "Superfast",
+    "daysOfOperation": ["Su","Mo","Tu","We","Th","Fr","Sa"],
+    "stations": [
+      {"stationCode":"TPJ","stationName":"Tiruchirapalli","arrivalTime":null,"departureTime":"22:30","distance":0,"sequence":1,"isSource":true},
+      {"stationCode":"PUG","stationName":"Pugalur","arrivalTime":"23:30","departureTime":"23:32","distance":80,"sequence":2},
+      {"stationCode":"ED","stationName":"Erode Junction","arrivalTime":"01:15","departureTime":"01:20","distance":130,"sequence":3},
+      {"stationCode":"SA","stationName":"Salem Junction","arrivalTime":"02:15","departureTime":"02:20","distance":200,"sequence":4},
+      {"stationCode":"DPJ","stationName":"Dharmapuri","arrivalTime":"03:30","departureTime":"03:32","distance":280,"sequence":5},
+      {"stationCode":"BWT","stationName":"Bangarapet","arrivalTime":"06:15","departureTime":"06:17","distance":430,"sequence":6},
+      {"stationCode":"SBC","stationName":"Bengaluru City","arrivalTime":"08:00","departureTime":null,"distance":500,"sequence":7,"isDestination":true}
+    ],
+    "classes": [
+      {"classType":"Sleeper","farePerKm":1.28,"totalSeats":72},
+      {"classType":"AC 3 Tier","farePerKm":3.45,"totalSeats":64},
+      {"classType":"AC 2 Tier","farePerKm":5.55,"totalSeats":48}
+    ]},
+  {
+    "trainNumber": "12671",
+    "trainName": "Mysore SF Express",
+    "trainType": "Superfast",
+    "daysOfOperation": ["Su","Mo","Tu","We","Th","Fr","Sa"],
+    "stations": [
+      {"stationCode":"MAS","stationName":"Chennai Central","arrivalTime":null,"departureTime":"21:30","distance":0,"sequence":1,"isSource":true},
+      {"stationCode":"KPD","stationName":"Katpadi","arrivalTime":"23:30","departureTime":"23:35","distance":130,"sequence":2},
+      {"stationCode":"TPJ","stationName":"Tiruchirapalli","arrivalTime":"03:45","departureTime":"03:50","distance":336,"sequence":3},
+      {"stationCode":"ED","stationName":"Erode Junction","arrivalTime":"06:30","departureTime":"06:35","distance":450,"sequence":4},
+      {"stationCode":"SA","stationName":"Salem Junction","arrivalTime":"07:45","departureTime":"07:50","distance":520,"sequence":5},
+      {"stationCode":"MYS","stationName":"Mysore Junction","arrivalTime":"11:30","departureTime":null,"distance":650,"sequence":6,"isDestination":true}
+    ],
+    "classes": [
+      {"classType":"Sleeper","farePerKm":1.28,"totalSeats":72},
+      {"classType":"AC 3 Tier","farePerKm":3.45,"totalSeats":64},
+      {"classType":"AC 2 Tier","farePerKm":5.55,"totalSeats":48}
+    ]},
+  {
+    "trainNumber": "12673",
+    "trainName": "Cheran SF Express",
+    "trainType": "Superfast",
+    "daysOfOperation": ["Su","Mo","Tu","We","Th","Fr","Sa"],
+    "stations": [
+      {"stationCode":"CBE","stationName":"Coimbatore Junction","arrivalTime":null,"departureTime":"18:15","distance":0,"sequence":1,"isSource":true},
+      {"stationCode":"TUP","stationName":"Tiruppur","arrivalTime":"19:00","departureTime":"19:02","distance":50,"sequence":2},
+      {"stationCode":"ED","stationName":"Erode Junction","arrivalTime":"19:50","departureTime":"19:55","distance":100,"sequence":3},
+      {"stationCode":"SA","stationName":"Salem Junction","arrivalTime":"21:05","departureTime":"21:10","distance":170,"sequence":4},
+      {"stationCode":"TPJ","stationName":"Tiruchirapalli","arrivalTime":"00:30","departureTime":"00:35","distance":300,"sequence":5},
+      {"stationCode":"VRI","stationName":"Vridhachalam","arrivalTime":"01:45","departureTime":"01:47","distance":390,"sequence":6},
+      {"stationCode":"MS","stationName":"Chennai Egmore","arrivalTime":"05:30","departureTime":null,"distance":510,"sequence":7,"isDestination":true}
+    ],
+    "classes": [
+      {"classType":"Sleeper","farePerKm":1.28,"totalSeats":72},
+      {"classType":"AC 3 Tier","farePerKm":3.45,"totalSeats":64},
+      {"classType":"AC 2 Tier","farePerKm":5.55,"totalSeats":48}
+    ]},
+  {
+    "trainNumber": "16101",
+    "trainName": "Guruvayur Express",
+    "trainType": "Express",
+    "daysOfOperation": ["Su","Mo","Tu","We","Th","Fr","Sa"],
+    "stations": [
+      {"stationCode":"MS","stationName":"Chennai Egmore","arrivalTime":null,"departureTime":"20:45","distance":0,"sequence":1,"isSource":true},
+      {"stationCode":"VM","stationName":"Villupuram","arrivalTime":"23:00","departureTime":"23:05","distance":159,"sequence":2},
+      {"stationCode":"TPJ","stationName":"Tiruchirapalli","arrivalTime":"02:15","departureTime":"02:20","distance":336,"sequence":3},
+      {"stationCode":"DG","stationName":"Dindigul","arrivalTime":"03:45","departureTime":"03:50","distance":431,"sequence":4},
+      {"stationCode":"KRR","stationName":"Karur","arrivalTime":"05:00","departureTime":"05:02","distance":490,"sequence":5},
+      {"stationCode":"ED","stationName":"Erode Junction","arrivalTime":"06:15","departureTime":"06:20","distance":530,"sequence":6},
+      {"stationCode":"SRR","stationName":"Shoranur Junction","arrivalTime":"10:15","departureTime":null,"distance":650,"sequence":7,"isDestination":true}
+    ],
+    "classes": [
+      {"classType":"Sleeper","farePerKm":1.28,"totalSeats":72},
+      {"classType":"AC 3 Tier","farePerKm":3.45,"totalSeats":64}
+    ]},
+  {
+    "trainNumber": "12695",
+    "trainName": "Tirunelveli SF Express",
+    "trainType": "Superfast",
+    "daysOfOperation": ["Su","Mo","Tu","We","Th","Fr","Sa"],
+    "stations": [
+      {"stationCode":"MAS","stationName":"Chennai Central","arrivalTime":null,"departureTime":"19:15","distance":0,"sequence":1,"isSource":true},
+      {"stationCode":"CGL","stationName":"Chengalpattu","arrivalTime":"20:13","departureTime":"20:15","distance":56,"sequence":2},
+      {"stationCode":"VM","stationName":"Villupuram","arrivalTime":"21:55","departureTime":"22:00","distance":159,"sequence":3},
+      {"stationCode":"TPJ","stationName":"Tiruchirapalli","arrivalTime":"01:10","departureTime":"01:15","distance":336,"sequence":4},
+      {"stationCode":"MDU","stationName":"Madurai Junction","arrivalTime":"03:45","departureTime":"03:50","distance":497,"sequence":5},
+      {"stationCode":"VPT","stationName":"Virudhunagar","arrivalTime":"04:53","departureTime":"04:55","distance":542,"sequence":6},
+      {"stationCode":"TEN","stationName":"Tirunelveli","arrivalTime":"07:45","departureTime":null,"distance":681,"sequence":7,"isDestination":true}
+    ],
+    "classes": [
+      {"classType":"Sleeper","farePerKm":1.28,"totalSeats":72},
+      {"classType":"AC 3 Tier","farePerKm":3.45,"totalSeats":64},
+      {"classType":"AC 2 Tier","farePerKm":5.55,"totalSeats":48}
+    ]},
+  {
+    "trainNumber": "12659",
+    "trainName": "Anantapuri Express",
+    "trainType": "Superfast",
+    "daysOfOperation": ["Su","Mo","Tu","We","Th","Fr","Sa"],
+    "stations": [
+      {"stationCode":"CAPE","stationName":"Kanyakumari","arrivalTime":null,"departureTime":"17:30","distance":0,"sequence":1,"isSource":true},
+      {"stationCode":"NCJ","stationName":"Nagercoil","arrivalTime":"18:00","departureTime":"18:05","distance":16,"sequence":2},
+      {"stationCode":"TEN","stationName":"Tirunelveli","arrivalTime":"19:30","departureTime":"19:35","distance":153,"sequence":3},
+      {"stationCode":"MDU","stationName":"Madurai Junction","arrivalTime":"22:15","departureTime":"22:20","distance":337,"sequence":4},
+      {"stationCode":"TPJ","stationName":"Tiruchirapalli","arrivalTime":"01:00","departureTime":"01:05","distance":498,"sequence":5},
+      {"stationCode":"VM","stationName":"Villupuram","arrivalTime":"04:15","departureTime":"04:20","distance":675,"sequence":6},
+      {"stationCode":"MAS","stationName":"Chennai Central","arrivalTime":"08:00","departureTime":null,"distance":834,"sequence":7,"isDestination":true}
+    ],
+    "classes": [
+      {"classType":"Sleeper","farePerKm":1.28,"totalSeats":72},
+      {"classType":"AC 3 Tier","farePerKm":3.45,"totalSeats":64},
+      {"classType":"AC 2 Tier","farePerKm":5.55,"totalSeats":48}
+    ]},
+  {
+    "trainNumber": "16351",
+    "trainName": "Vanchinad Express",
+    "trainType": "Express",
+    "daysOfOperation": ["Su","Mo","Tu","We","Th","Fr","Sa"],
+    "stations": [
+      {"stationCode":"ERS","stationName":"Ernakulam","arrivalTime":null,"departureTime":"17:00","distance":0,"sequence":1,"isSource":true},
+      {"stationCode":"TCR","stationName":"Thrissur","arrivalTime":"18:15","departureTime":"18:18","distance":74,"sequence":2},
+      {"stationCode":"SRR","stationName":"Shoranur","arrivalTime":"19:15","departureTime":"19:20","distance":108,"sequence":3},
+      {"stationCode":"PGT","stationName":"Palakkad","arrivalTime":"20:30","departureTime":"20:35","distance":180,"sequence":4},
+      {"stationCode":"CBE","stationName":"Coimbatore","arrivalTime":"22:00","departureTime":"22:05","distance":260,"sequence":5},
+      {"stationCode":"TPJ","stationName":"Tiruchirapalli","arrivalTime":"02:30","departureTime":"02:35","distance":420,"sequence":6},
+      {"stationCode":"MS","stationName":"Chennai Egmore","arrivalTime":"08:30","departureTime":null,"distance":756,"sequence":7,"isDestination":true}
+    ],
+    "classes": [
+      {"classType":"Sleeper","farePerKm":1.28,"totalSeats":72},
+      {"classType":"AC 3 Tier","farePerKm":3.45,"totalSeats":64}
+    ]},
+  {
+    "trainNumber": "12633",
+    "trainName": "Kovai SF Express",
+    "trainType": "Superfast",
+    "daysOfOperation": ["Su","Mo","Tu","We","Th","Fr","Sa"],
+    "stations": [
+      {"stationCode":"MS","stationName":"Chennai Egmore","arrivalTime":null,"departureTime":"22:30","distance":0,"sequence":1,"isSource":true},
+      {"stationCode":"TDPR","stationName":"Tirupati","arrivalTime":"01:30","departureTime":"01:35","distance":150,"sequence":2},
+      {"stationCode":"KPD","stationName":"Katpadi","arrivalTime":"03:15","departureTime":"03:20","distance":230,"sequence":3},
+      {"stationCode":"SA","stationName":"Salem Junction","arrivalTime":"06:15","departureTime":"06:20","distance":340,"sequence":4},
+      {"stationCode":"ED","stationName":"Erode Junction","arrivalTime":"07:30","departureTime":"07:35","distance":400,"sequence":5},
+      {"stationCode":"TPJ","stationName":"Tiruchirapalli","arrivalTime":"10:15","departureTime":"10:20","distance":550,"sequence":6},
+      {"stationCode":"CBE","stationName":"Coimbatore","arrivalTime":"13:30","departureTime":null,"distance":630,"sequence":7,"isDestination":true}
+    ],
+    "classes": [
+      {"classType":"Sleeper","farePerKm":1.28,"totalSeats":72},
+      {"classType":"AC 3 Tier","farePerKm":3.45,"totalSeats":64},
+      {"classType":"AC 2 Tier","farePerKm":5.55,"totalSeats":48}
+    ]},
+  {
+    "trainNumber": "12639",
+    "trainName": "Rock Fort SF Express",
+    "trainType": "Superfast",
+    "daysOfOperation": ["Su","Mo","Tu","We","Th","Fr","Sa"],
+    "stations": [
+      {"stationCode":"TPJ","stationName":"Tiruchirapalli","arrivalTime":null,"departureTime":"13:30","distance":0,"sequence":1,"isSource":true},
+      {"stationCode":"ALP","stationName":"Ariyalur","arrivalTime":"14:28","departureTime":"14:30","distance":76,"sequence":2},
+      {"stationCode":"VRI","stationName":"Vridhachalam","arrivalTime":"15:23","departureTime":"15:25","distance":132,"sequence":3},
+      {"stationCode":"VM","stationName":"Villupuram","arrivalTime":"16:35","departureTime":"16:40","distance":177,"sequence":4},
+      {"stationCode":"CGL","stationName":"Chengalpattu","arrivalTime":"18:33","departureTime":"18:35","distance":280,"sequence":5},
+      {"stationCode":"MBM","stationName":"Mambalam","arrivalTime":"19:28","departureTime":"19:30","distance":330,"sequence":6},
+      {"stationCode":"MS","stationName":"Chennai Egmore","arrivalTime":"19:50","departureTime":null,"distance":336,"sequence":7,"isDestination":true}
+    ],
+    "classes": [
+      {"classType":"Sleeper","farePerKm":1.28,"totalSeats":72},
+      {"classType":"AC 3 Tier","farePerKm":3.45,"totalSeats":64},
+      {"classType":"AC 2 Tier","farePerKm":5.55,"totalSeats":48}
+    ]},
+  {
+    "trainNumber": "16733",
+    "trainName": "Rameswaram Express",
+    "trainType": "Express",
+    "daysOfOperation": ["Su","Mo","Tu","We","Th","Fr","Sa"],
+    "stations": [
+      {"stationCode":"MS","stationName":"Chennai Egmore","arrivalTime":null,"departureTime":"20:15","distance":0,"sequence":1,"isSource":true},
+      {"stationCode":"VM","stationName":"Villupuram","arrivalTime":"22:30","departureTime":"22:35","distance":159,"sequence":2},
+      {"stationCode":"TPJ","stationName":"Tiruchirapalli","arrivalTime":"01:45","departureTime":"01:50","distance":336,"sequence":3},
+      {"stationCode":"MDU","stationName":"Madurai Junction","arrivalTime":"04:15","departureTime":"04:20","distance":497,"sequence":4},
+      {"stationCode":"VPT","stationName":"Virudhunagar","arrivalTime":"05:23","departureTime":"05:25","distance":542,"sequence":5},
+      {"stationCode":"MNN","stationName":"Manamadurai","arrivalTime":"06:20","departureTime":"06:25","distance":590,"sequence":6},
+      {"stationCode":"RMM","stationName":"Rameswaram","arrivalTime":"10:00","departureTime":null,"distance":670,"sequence":7,"isDestination":true}
+    ],
+    "classes": [
+      {"classType":"Sleeper","farePerKm":1.28,"totalSeats":72},
+      {"classType":"AC 3 Tier","farePerKm":3.45,"totalSeats":64}
+    ]},
+  {
+    "trainNumber": "22621",
+    "trainName": "West Coast SF Express",
+    "trainType": "Superfast",
+    "daysOfOperation": ["Mo","We","Fr"],
+    "stations": [
+      {"stationCode":"MAS","stationName":"Chennai Central","arrivalTime":null,"departureTime":"20:45","distance":0,"sequence":1,"isSource":true},
+      {"stationCode":"SA","stationName":"Salem Junction","arrivalTime":"02:15","departureTime":"02:20","distance":340,"sequence":2},
+      {"stationCode":"ED","stationName":"Erode Junction","arrivalTime":"03:30","departureTime":"03:35","distance":400,"sequence":3},
+      {"stationCode":"CBE","stationName":"Coimbatore","arrivalTime":"05:00","departureTime":"05:05","distance":495,"sequence":4},
+      {"stationCode":"PGT","stationName":"Palakkad","arrivalTime":"06:15","departureTime":"06:20","distance":550,"sequence":5},
+      {"stationCode":"TCR","stationName":"Thrissur","arrivalTime":"08:00","departureTime":"08:05","distance":650,"sequence":6},
+      {"stationCode":"ERS","stationName":"Ernakulam","arrivalTime":"10:00","departureTime":null,"distance":750,"sequence":7,"isDestination":true}
+    ],
+    "classes": [
+      {"classType":"Sleeper","farePerKm":1.28,"totalSeats":72},
+      {"classType":"AC 3 Tier","farePerKm":3.45,"totalSeats":64},
+      {"classType":"AC 2 Tier","farePerKm":5.55,"totalSeats":48}
+    ]},
+
+
+  {
+    "trainNumber": "12641",
+    "trainName": "Thirukkural SF Express",
+    "trainType": "Superfast",
+    "daysOfOperation": ["Su","Mo","Tu","We","Th","Fr","Sa"],
+    "stations": [
+      {"stationCode":"NDLS","stationName":"New Delhi","arrivalTime":null,"departureTime":"11:00","distance":0,"sequence":1,"isSource":true},
+      {"stationCode":"AGC","stationName":"Agra Cantt","arrivalTime":"13:05","departureTime":"13:10","distance":200,"sequence":2},
+      {"stationCode":"BPL","stationName":"Bhopal Junction","arrivalTime":"19:30","departureTime":"19:35","distance":700,"sequence":3},
+      {"stationCode":"NGP","stationName":"Nagpur","arrivalTime":"02:30","departureTime":"02:35","distance":1100,"sequence":4},
+      {"stationCode":"MAS","stationName":"Chennai Central","arrivalTime":"22:00","departureTime":"22:20","distance":2200,"sequence":5},
+      {"stationCode":"TPJ","stationName":"Tiruchirapalli","arrivalTime":"04:00","departureTime":"04:05","distance":2536,"sequence":6},
+      {"stationCode":"MDU","stationName":"Madurai Junction","arrivalTime":"07:00","departureTime":null,"distance":2701,"sequence":7,"isDestination":true}
+    ],
+    "classes": [
+      {"classType":"Sleeper","farePerKm":1.28,"totalSeats":72},
+      {"classType":"AC 3 Tier","farePerKm":3.45,"totalSeats":64},
+      {"classType":"AC 2 Tier","farePerKm":5.55,"totalSeats":48},
+      {"classType":"AC 1 Tier","farePerKm":8.98,"totalSeats":24}
+    ]},
+  {
+    "trainNumber": "12622",
+    "trainName": "Tamil Nadu SF Express",
+    "trainType": "Superfast",
+    "daysOfOperation":["Su","Mo","Tu","We","Th","Fr","Sa"],
+    "stations": [
+      {"stationCode":"NDLS","stationName":"New Delhi","arrivalTime":null,"departureTime":"20:45","distance":0,"sequence":1,"isSource":true},
+      {"stationCode":"CNB","stationName":"Kanpur Central","arrivalTime":"00:30","departureTime":"00:35","distance":440,"sequence":2},
+      {"stationCode":"PRYJ","stationName":"Prayagraj","arrivalTime":"03:45","departureTime":"03:50","distance":640,"sequence":3},
+      {"stationCode":"JBP","stationName":"Jabalpur","arrivalTime":"09:15","departureTime":"09:20","distance":1000,"sequence":4},
+      {"stationCode":"NGP","stationName":"Nagpur","arrivalTime":"15:00","departureTime":"15:05","distance":1100,"sequence":5},
+      {"stationCode":"MAS","stationName":"Chennai Central","arrivalTime":"07:00","departureTime":"07:20","distance":2200,"sequence":6},
+      {"stationCode":"TPJ","stationName":"Tiruchirapalli","arrivalTime":"13:30","departureTime":null,"distance":2536,"sequence":7,"isDestination":true}
+    ],
+    "classes": [
+      {"classType":"Sleeper","farePerKm":1.28,"totalSeats":72},
+      {"classType":"AC 3 Tier","farePerKm":3.45,"totalSeats":64},
+      {"classType":"AC 2 Tier","farePerKm":5.55,"totalSeats":48},
+      {"classType":"AC 1 Tier","farePerKm":8.98,"totalSeats":24}
+    ]},
+  {
+    "trainNumber": "12615",
+    "trainName": "Grand Trunk Express",
+    "trainType": "Superfast",
+    "daysOfOperation": ["Su","Mo","Tu","We","Th","Fr","Sa"],
+    "stations": [
+      {"stationCode":"NDLS","stationName":"New Delhi","arrivalTime":null,"departureTime":"21:45","distance":0,"sequence":1,"isSource":true},
+      {"stationCode":"JHS","stationName":"Jhansi Junction","arrivalTime":"03:20","departureTime":"03:30","distance":410,"sequence":2},
+      {"stationCode":"BPL","stationName":"Bhopal Junction","arrivalTime":"08:45","departureTime":"08:55","distance":700,"sequence":3},
+      {"stationCode":"NGP","stationName":"Nagpur","arrivalTime":"15:45","departureTime":"15:55","distance":1100,"sequence":4},
+      {"stationCode":"G","stationName":"Guntur Junction","arrivalTime":"04:30","departureTime":"04:40","distance":1800,"sequence":5},
+      {"stationCode":"MAS","stationName":"Chennai Central","arrivalTime":"12:15","departureTime":"12:35","distance":2200,"sequence":6},
+      {"stationCode":"TPJ","stationName":"Tiruchirapalli","arrivalTime":"18:45","departureTime":null,"distance":2536,"sequence":7,"isDestination":true}
+    ],
+    "classes": [
+      {"classType":"Sleeper","farePerKm":1.28,"totalSeats":72},
+      {"classType":"AC 3 Tier","farePerKm":3.45,"totalSeats":64},
+      {"classType":"AC 2 Tier","farePerKm":5.55,"totalSeats":48},
+      {"classType":"AC 1 Tier","farePerKm":8.98,"totalSeats":24}
+    ]},
+  {
+    "trainNumber": "12635",
+    "trainName": "Kerala SF Express",
+    "trainType": "Superfast",
+    "daysOfOperation": ["Su","Mo","Tu","We","Th","Fr","Sa"],
+    "stations": [
+      {"stationCode":"NDLS","stationName":"New Delhi","arrivalTime":null,"departureTime":"22:30","distance":0,"sequence":1,"isSource":true},
+      {"stationCode":"NZM","stationName":"Hazrat Nizamuddin","arrivalTime":"22:50","departureTime":"22:52","distance":10,"sequence":2},
+      {"stationCode":"AGC","stationName":"Agra Cantt","arrivalTime":"01:15","departureTime":"01:20","distance":200,"sequence":3},
+      {"stationCode":"NGP","stationName":"Nagpur","arrivalTime":"12:00","departureTime":"12:05","distance":1100,"sequence":4},
+      {"stationCode":"SC","stationName":"Secunderabad","arrivalTime":"21:30","departureTime":"21:40","distance":1600,"sequence":5},
+      {"stationCode":"MAS","stationName":"Chennai Central","arrivalTime":"07:00","departureTime":"07:20","distance":2200,"sequence":6},
+      {"stationCode":"ERS","stationName":"Ernakulam","arrivalTime":"20:00","departureTime":null,"distance":2900,"sequence":7,"isDestination":true}
+    ],
+    "classes": [
+      {"classType":"Sleeper","farePerKm":1.28,"totalSeats":72},
+      {"classType":"AC 3 Tier","farePerKm":3.45,"totalSeats":64},
+      {"classType":"AC 2 Tier","farePerKm":5.55,"totalSeats":48},
+      {"classType":"AC 1 Tier","farePerKm":8.98,"totalSeats":24}
+    ]},
+  {
+    "trainNumber": "12655",
+    "trainName": "Navjeevan SF Express",
+    "trainType": "Superfast",
+    "daysOfOperation": ["Su","Mo","Tu","We","Th","Fr","Sa"],
+    "stations": [
+      {"stationCode":"ADI","stationName":"Ahmedabad","arrivalTime":null,"departureTime":"18:30","distance":0,"sequence":1,"isSource":true},
+      {"stationCode":"BRC","stationName":"Vadodara","arrivalTime":"20:15","departureTime":"20:20","distance":100,"sequence":2},
+      {"stationCode":"ST","stationName":"Surat","arrivalTime":"23:00","departureTime":"23:05","distance":260,"sequence":3},
+      {"stationCode":"BSL","stationName":"Bhusaval","arrivalTime":"05:30","departureTime":"05:35","distance":700,"sequence":4},
+      {"stationCode":"NGP","stationName":"Nagpur","arrivalTime":"13:00","departureTime":"13:05","distance":1000,"sequence":5},
+      {"stationCode":"MAS","stationName":"Chennai Central","arrivalTime":"05:00","departureTime":"05:20","distance":1800,"sequence":6},
+      {"stationCode":"TPJ","stationName":"Tiruchirapalli","arrivalTime":"11:30","departureTime":null,"distance":2136,"sequence":7,"isDestination":true}
+    ],
+    "classes": [
+      {"classType":"Sleeper","farePerKm":1.28,"totalSeats":72},
+      {"classType":"AC 3 Tier","farePerKm":3.45,"totalSeats":64},
+      {"classType":"AC 2 Tier","farePerKm":5.55,"totalSeats":48}
+    ]},
+  {
+    "trainNumber": "12645",
+    "trainName": "Madurai SF Express",
+    "trainType": "Superfast",
+    "daysOfOperation": ["Su","Mo","Tu","We","Th","Fr","Sa"],
+    "stations": [
+      {"stationCode":"CSMT","stationName":"Mumbai CSMT","arrivalTime":null,"departureTime":"14:20","distance":0,"sequence":1,"isSource":true},
+      {"stationCode":"KYN","stationName":"Kalyan","arrivalTime":"15:20","departureTime":"15:23","distance":54,"sequence":2},
+      {"stationCode":"PUNE","stationName":"Pune Junction","arrivalTime":"18:00","departureTime":"18:05","distance":180,"sequence":3},
+      {"stationCode":"SUR","stationName":"Solapur","arrivalTime":"22:30","departureTime":"22:35","distance":450,"sequence":4},
+      {"stationCode":"GTL","stationName":"Guntakal","arrivalTime":"05:00","departureTime":"05:05","distance":1000,"sequence":5},
+      {"stationCode":"TPJ","stationName":"Tiruchirapalli","arrivalTime":"13:30","departureTime":"13:35","distance":1600,"sequence":6},
+      {"stationCode":"MDU","stationName":"Madurai Junction","arrivalTime":"16:30","departureTime":null,"distance":1765,"sequence":7,"isDestination":true}
+    ],
+    "classes": [
+      {"classType":"Sleeper","farePerKm":1.28,"totalSeats":72},
+      {"classType":"AC 3 Tier","farePerKm":3.45,"totalSeats":64},
+      {"classType":"AC 2 Tier","farePerKm":5.55,"totalSeats":48}
+    ]},
+  {
+    "trainNumber": "12623",
+    "trainName": "Trivandrum Mail",
+    "trainType": "Mail",
+    "daysOfOperation": ["Tu","Th","Sa"],
+    "stations": [
+      {"stationCode":"NZM","stationName":"Hazrat Nizamuddin","arrivalTime":null,"departureTime":"07:40","distance":0,"sequence":1,"isSource":true},
+      {"stationCode":"AGC","stationName":"Agra Cantt","arrivalTime":"10:05","departureTime":"10:10","distance":200,"sequence":2},
+      {"stationCode":"BPL","stationName":"Bhopal Junction","arrivalTime":"16:45","departureTime":"16:55","distance":700,"sequence":3},
+      {"stationCode":"NGP","stationName":"Nagpur","arrivalTime":"00:30","departureTime":"00:40","distance":1100,"sequence":4},
+      {"stationCode":"MAS","stationName":"Chennai Central","arrivalTime":"20:15","departureTime":"20:35","distance":2200,"sequence":5},
+      {"stationCode":"TPJ","stationName":"Tiruchirapalli","arrivalTime":"02:45","departureTime":"02:50","distance":2536,"sequence":6},
+      {"stationCode":"TVC","stationName":"Trivandrum Central","arrivalTime":"16:00","departureTime":null,"distance":3300,"sequence":7,"isDestination":true}
+    ],
+    "classes": [
+      {"classType":"Sleeper","farePerKm":1.28,"totalSeats":72},
+      {"classType":"AC 3 Tier","farePerKm":3.45,"totalSeats":64},
+      {"classType":"AC 2 Tier","farePerKm":5.55,"totalSeats":48},
+      {"classType":"AC 1 Tier","farePerKm":8.98,"totalSeats":24}
+    ]},
+  {
+    "trainNumber": "12625",
+    "trainName": "Kerala Express",
+    "trainType": "Superfast",
+    "daysOfOperation": ["Su","Mo","Tu","We","Th","Fr","Sa"],
+    "stations": [
+      {"stationCode":"NDLS","stationName":"New Delhi","arrivalTime":null,"departureTime":"22:40","distance":0,"sequence":1,"isSource":true},
+      {"stationCode":"CNB","stationName":"Kanpur Central","arrivalTime":"02:35","departureTime":"02:40","distance":440,"sequence":2},
+      {"stationCode":"PRYJ","stationName":"Prayagraj","arrivalTime":"05:50","departureTime":"06:00","distance":640,"sequence":3},
+      {"stationCode":"JBP","stationName":"Jabalpur","arrivalTime":"11:20","departureTime":"11:30","distance":1000,"sequence":4},
+      {"stationCode":"NGP","stationName":"Nagpur","arrivalTime":"17:25","departureTime":"17:35","distance":1100,"sequence":5},
+      {"stationCode":"MAS","stationName":"Chennai Central","arrivalTime":"09:15","departureTime":"09:35","distance":2200,"sequence":6},
+      {"stationCode":"TVC","stationName":"Trivandrum Central","arrivalTime":"05:00","departureTime":null,"distance":3300,"sequence":7,"isDestination":true}
+    ],
+    "classes": [
+      {"classType":"Sleeper","farePerKm":1.28,"totalSeats":72},
+      {"classType":"AC 3 Tier","farePerKm":3.45,"totalSeats":64},
+      {"classType":"AC 2 Tier","farePerKm":5.55,"totalSeats":48},
+      {"classType":"AC 1 Tier","farePerKm":8.98,"totalSeats":24}
+    ]},
+  {
+    "trainNumber": "12667",
+    "trainName": "Mangala SF Express",
+    "trainType": "Superfast",
+    "daysOfOperation": ["We","Fr","Su"],
+    "stations": [
+      {"stationCode":"JP","stationName":"Jaipur","arrivalTime":null,"departureTime":"19:40","distance":0,"sequence":1,"isSource":true},
+      {"stationCode":"BTE","stationName":"Bharatpur","arrivalTime":"21:30","departureTime":"21:32","distance":180,"sequence":2},
+      {"stationCode":"AGC","stationName":"Agra Cantt","arrivalTime":"22:40","departureTime":"22:45","distance":240,"sequence":3},
+      {"stationCode":"NGP","stationName":"Nagpur","arrivalTime":"10:00","departureTime":"10:05","distance":1100,"sequence":4},
+      {"stationCode":"SC","stationName":"Secunderabad","arrivalTime":"19:30","departureTime":"19:40","distance":1600,"sequence":5},
+      {"stationCode":"MAS","stationName":"Chennai Central","arrivalTime":"05:15","departureTime":"05:35","distance":2200,"sequence":6},
+      {"stationCode":"TPJ","stationName":"Tiruchirapalli","arrivalTime":"12:00","departureTime":null,"distance":2536,"sequence":7,"isDestination":true}
+    ],
+    "classes": [
+      {"classType":"Sleeper","farePerKm":1.28,"totalSeats":72},
+      {"classType":"AC 3 Tier","farePerKm":3.45,"totalSeats":64},
+      {"classType":"AC 2 Tier","farePerKm":5.55,"totalSeats":48}
+    ]},
+  {
+    "trainNumber": "12643",
+    "trainName": "Bhuvaneshwar SF Express",
+    "trainType":"Superfast",
+    "daysOfOperation":["Su","Mo","Tu","We","Th","Fr","Sa"],
+    "stations":[
+      {"stationCode":"BBS","stationName":"Bhubaneswar","arrivalTime":null,"departureTime":"19:00","distance":0,"sequence":1,"isSource":true},
+      {"stationCode":"KGP","stationName":"Kharagpur","arrivalTime":"22:30","departureTime":"22:35","distance":260,"sequence":2},
+      {"stationCode":"HWH","stationName":"Howrah","arrivalTime":"00:45","departureTime":"01:00","distance":440,"sequence":3},
+      {"stationCode":"MAS","stationName":"Chennai Central","arrivalTime":"12:00","departureTime":"12:20","distance":1660,"sequence":4},
+      {"stationCode":"TPJ","stationName":"Tiruchirapalli","arrivalTime":"18:30","departureTime":"18:35","distance":1996,"sequence":5},
+      {"stationCode":"MDU","stationName":"Madurai Junction","arrivalTime":"21:30","departureTime":"21:35","distance":2161,"sequence":6},
+      {"stationCode":"TEN","stationName":"Tirunelveli","arrivalTime":"00:30","departureTime":null,"distance":2300,"sequence":7,"isDestination":true}
+    ],
+    "classes":[
+      {"classType":"Sleeper","farePerKm":1.28,"totalSeats":72},
+      {"classType":"AC 3 Tier","farePerKm":3.45,"totalSeats":64},
+      {"classType":"AC 2 Tier","farePerKm":5.55,"totalSeats":48}
+    ]},
+  {
+    "trainNumber": "22611",
+    "trainName":"Patna SF Express",
+    "trainType":"Superfast",
+    "daysOfOperation":["Mo","Th","Sa"],
+    "stations":[
+      {"stationCode":"PNBE","stationName":"Patna Junction","arrivalTime":null,"departureTime":"18:30","distance":0,"sequence":1,"isSource":true},
+      {"stationCode":"DDU","stationName":"Pt Deen Dayal Upadhyaya","arrivalTime":"22:00","departureTime":"22:10","distance":200,"sequence":2},
+      {"stationCode":"R","stationName":"Raipur","arrivalTime":"07:00","departureTime":"07:10","distance":800,"sequence":3},
+      {"stationCode":"VSKP","stationName":"Visakhapatnam","arrivalTime":"14:00","departureTime":"14:10","distance":1200,"sequence":4},
+      {"stationCode":"MAS","stationName":"Chennai Central","arrivalTime":"03:00","departureTime":"03:20","distance":1800,"sequence":5},
+      {"stationCode":"TPJ","stationName":"Tiruchirapalli","arrivalTime":"09:30","departureTime":"09:35","distance":2136,"sequence":6},
+      {"stationCode":"MDU","stationName":"Madurai Junction","arrivalTime":"12:30","departureTime":null,"distance":2301,"sequence":7,"isDestination":true}
+    ],
+    "classes":[
+      {"classType":"Sleeper","farePerKm":1.28,"totalSeats":72},
+      {"classType":"AC 3 Tier","farePerKm":3.45,"totalSeats":64},
+      {"classType":"AC 2 Tier","farePerKm":5.55,"totalSeats":48}
+    ]},
+  {
+    "trainNumber": "12657",
+    "trainName":"Guwahati SF Express",
+    "trainType":"Superfast",
+    "daysOfOperation":["Su","Mo","Tu","We","Th","Fr","Sa"],
+    "stations":[
+      {"stationCode":"GHY","stationName":"Guwahati","arrivalTime":null,"departureTime":"08:00","distance":0,"sequence":1,"isSource":true},
+      {"stationCode":"NJP","stationName":"New Jalpaiguri","arrivalTime":"13:30","departureTime":"13:40","distance":450,"sequence":2},
+      {"stationCode":"HWH","stationName":"Howrah","arrivalTime":"20:45","departureTime":"21:00","distance":1100,"sequence":3},
+      {"stationCode":"MAS","stationName":"Chennai Central","arrivalTime":"09:30","departureTime":"09:50","distance":1660,"sequence":4},
+      {"stationCode":"TPJ","stationName":"Tiruchirapalli","arrivalTime":"16:00","departureTime":"16:05","distance":1996,"sequence":5},
+      {"stationCode":"MDU","stationName":"Madurai Junction","arrivalTime":"19:00","departureTime":"19:05","distance":2161,"sequence":6},
+      {"stationCode":"CAPE","stationName":"Kanyakumari","arrivalTime":"06:00","departureTime":null,"distance":2800,"sequence":7,"isDestination":true}
+    ],
+    "classes":[
+      {"classType":"Sleeper","farePerKm":1.28,"totalSeats":72},
+      {"classType":"AC 3 Tier","farePerKm":3.45,"totalSeats":64},
+      {"classType":"AC 2 Tier","farePerKm":5.55,"totalSeats":48},
+      {"classType":"AC 1 Tier","farePerKm":8.98,"totalSeats":24}
+    ]},
+  {
+    "trainNumber": "12432",
+    "trainName":"Rajdhani Express",
+    "trainType":"Superfast",
+    "daysOfOperation":["Tu","Fr","Su"],
+    "stations":[
+      {"stationCode":"NDLS","stationName":"New Delhi","arrivalTime":null,"departureTime":"16:55","distance":0,"sequence":1,"isSource":true},
+      {"stationCode":"CNB","stationName":"Kanpur Central","arrivalTime":"20:50","departureTime":"20:55","distance":440,"sequence":2},
+      {"stationCode":"PRYJ","stationName":"Prayagraj","arrivalTime":"23:55","departureTime":"00:05","distance":640,"sequence":3},
+      {"stationCode":"NGP","stationName":"Nagpur","arrivalTime":"09:15","departureTime":"09:25","distance":1100,"sequence":4},
+      {"stationCode":"SC","stationName":"Secunderabad","arrivalTime":"18:40","departureTime":"18:50","distance":1600,"sequence":5},
+      {"stationCode":"TPJ","stationName":"Tiruchirapalli","arrivalTime":"06:00","departureTime":"06:05","distance":2536,"sequence":6},
+      {"stationCode":"TVC","stationName":"Trivandrum Central","arrivalTime":"18:00","departureTime":null,"distance":3300,"sequence":7,"isDestination":true}
+    ],
+    "classes":[
+      {"classType":"AC 3 Tier","farePerKm":3.45,"totalSeats":64},
+      {"classType":"AC 2 Tier","farePerKm":5.55,"totalSeats":48},
+      {"classType":"AC 1 Tier","farePerKm":8.98,"totalSeats":24}
+    ]},
+  {
+    "trainNumber": "12621",
+    "trainName":"Mumbai Mail",
+    "trainType":"Mail",
+    "daysOfOperation":["Su","Mo","Tu","We","Th","Fr","Sa"],
+    "stations":[
+      {"stationCode":"CSMT","stationName":"Mumbai CSMT","arrivalTime":null,"departureTime":"20:15","distance":0,"sequence":1,"isSource":true},
+      {"stationCode":"KYN","stationName":"Kalyan","arrivalTime":"21:15","departureTime":"21:18","distance":54,"sequence":2},
+      {"stationCode":"PUNE","stationName":"Pune Junction","arrivalTime":"00:05","departureTime":"00:10","distance":180,"sequence":3},
+      {"stationCode":"SUR","stationName":"Solapur","arrivalTime":"04:30","departureTime":"04:35","distance":450,"sequence":4},
+      {"stationCode":"GTL","stationName":"Guntakal","arrivalTime":"11:00","departureTime":"11:05","distance":1000,"sequence":5},
+      {"stationCode":"TPJ","stationName":"Tiruchirapalli","arrivalTime":"19:30","departureTime":"19:35","distance":1600,"sequence":6},
+      {"stationCode":"CAPE","stationName":"Kanyakumari","arrivalTime":"08:00","departureTime":null,"distance":2400,"sequence":7,"isDestination":true}
+    ],
+    "classes":[
+      {"classType":"Sleeper","farePerKm":1.28,"totalSeats":72},
+      {"classType":"AC 3 Tier","farePerKm":3.45,"totalSeats":64},
+      {"classType":"AC 2 Tier","farePerKm":5.55,"totalSeats":48}
+    ]},
+  {
+    "trainNumber": "12649",
+    "trainName":"Sanghamitra SF Express",
+    "trainType":"Superfast",
+    "daysOfOperation":["Su","Mo","Tu","We","Th","Fr","Sa"],
+    "stations":[
+      {"stationCode":"BSB","stationName":"Varanasi","arrivalTime":null,"departureTime":"12:00","distance":0,"sequence":1,"isSource":true},
+      {"stationCode":"PRYJ","stationName":"Prayagraj","arrivalTime":"14:30","departureTime":"14:40","distance":200,"sequence":2},
+      {"stationCode":"JBP","stationName":"Jabalpur","arrivalTime":"20:00","departureTime":"20:10","distance":400,"sequence":3},
+      {"stationCode":"NGP","stationName":"Nagpur","arrivalTime":"02:00","departureTime":"02:10","distance":800,"sequence":4},
+      {"stationCode":"SC","stationName":"Secunderabad","arrivalTime":"11:30","departureTime":"11:40","distance":1300,"sequence":5},
+      {"stationCode":"TPJ","stationName":"Tiruchirapalli","arrivalTime":"23:00","departureTime":"23:05","distance":2236,"sequence":6},
+      {"stationCode":"NCJ","stationName":"Nagercoil","arrivalTime":"10:00","departureTime":null,"distance":2800,"sequence":7,"isDestination":true}
+    ],
+    "classes":[
+      {"classType":"Sleeper","farePerKm":1.28,"totalSeats":72},
+      {"classType":"AC 3 Tier","farePerKm":3.45,"totalSeats":64},
+      {"classType":"AC 2 Tier","farePerKm":5.55,"totalSeats":48}
+    ]},
+  {
+    "trainNumber": "12609",
+    "trainName":"Bangalore Rajdhani",
+    "trainType":"Superfast",
+    "daysOfOperation":["Mo","We","Fr"],
+    "stations":[
+      {"stationCode":"NDLS","stationName":"New Delhi","arrivalTime":null,"departureTime":"17:50","distance":0,"sequence":1,"isSource":true},
+      {"stationCode":"AGC","stationName":"Agra Cantt","arrivalTime":"20:25","departureTime":"20:30","distance":200,"sequence":2},
+      {"stationCode":"BPL","stationName":"Bhopal Junction","arrivalTime":"03:00","departureTime":"03:10","distance":700,"sequence":3},
+      {"stationCode":"NGP","stationName":"Nagpur","arrivalTime":"09:45","departureTime":"09:55","distance":1100,"sequence":4},
+      {"stationCode":"SBC","stationName":"Bengaluru City","arrivalTime":"06:30","departureTime":"06:40","distance":2400,"sequence":5},
+      {"stationCode":"TPJ","stationName":"Tiruchirapalli","arrivalTime":"13:00","departureTime":"13:05","distance":2800,"sequence":6},
+      {"stationCode":"MDU","stationName":"Madurai Junction","arrivalTime":"16:00","departureTime":null,"distance":2965,"sequence":7,"isDestination":true}
+    ],
+    "classes":[
+      {"classType":"AC 3 Tier","farePerKm":3.45,"totalSeats":64},
+      {"classType":"AC 2 Tier","farePerKm":5.55,"totalSeats":48},
+      {"classType":"AC 1 Tier","farePerKm":8.98,"totalSeats":24}
+    ]},
+  {
+    "trainNumber": "12663",
+    "trainName":"Chennai SF Express",
+    "trainType":"Superfast",
+    "daysOfOperation":["Su","Mo","Tu","We","Th","Fr","Sa"],
+    "stations":[
+      {"stationCode":"CDG","stationName":"Chandigarh","arrivalTime":null,"departureTime":"09:30","distance":0,"sequence":1,"isSource":true},
+      {"stationCode":"NDLS","stationName":"New Delhi","arrivalTime":"12:45","departureTime":"13:05","distance":250,"sequence":2},
+      {"stationCode":"AGC","stationName":"Agra Cantt","arrivalTime":"15:30","departureTime":"15:35","distance":450,"sequence":3},
+      {"stationCode":"NGP","stationName":"Nagpur","arrivalTime":"02:00","departureTime":"02:10","distance":1350,"sequence":4},
+      {"stationCode":"MAS","stationName":"Chennai Central","arrivalTime":"14:30","departureTime":"14:50","distance":2450,"sequence":5},
+      {"stationCode":"TPJ","stationName":"Tiruchirapalli","arrivalTime":"21:00","departureTime":"21:05","distance":2786,"sequence":6},
+      {"stationCode":"TEN","stationName":"Tirunelveli","arrivalTime":"02:00","departureTime":null,"distance":3050,"sequence":7,"isDestination":true}
+    ],
+    "classes":[
+      {"classType":"Sleeper","farePerKm":1.28,"totalSeats":72},
+      {"classType":"AC 3 Tier","farePerKm":3.45,"totalSeats":64},
+      {"classType":"AC 2 Tier","farePerKm":5.55,"totalSeats":48}
+    ]}
+]
+

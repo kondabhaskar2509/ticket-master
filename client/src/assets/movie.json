@@ -1,0 +1,631 @@
+[
+  {
+    "id": 1,
+    "title": "Inception",
+    "poster": "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+    "genres": ["Action", "Sci-Fi", "Thriller"],
+    "actors": [
+      "Leonardo DiCaprio",
+      "Joseph Gordon-Levitt",
+      "Elliot Page",
+      "Tom Hardy"
+    ],
+    "writer": "Christopher Nolan",
+    "director": "Christopher Nolan",
+    "duration": 148,
+    "releaseYear": 2010,
+    "description": "A thief who steals corporate secrets through dream-sharing technology is given the inverse task of planting an idea into the mind of a CEO."
+  },
+  {
+    "id": 2,
+    "title": "The Dark Knight",
+    "poster": "https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg",
+    "genres": ["Action", "Crime", "Drama"],
+    "actors": [
+      "Christian Bale",
+      "Heath Ledger",
+      "Aaron Eckhart",
+      "Maggie Gyllenhaal"
+    ],
+    "writer": "Jonathan Nolan, Christopher Nolan",
+    "director": "Christopher Nolan",
+    "duration": 152,
+    "releaseYear": 2008,
+    "description": "Batman faces the Joker, a criminal mastermind who plunges Gotham into chaos."
+  },
+  {
+    "id": 3,
+    "title": "Interstellar",
+    "poster": "https://m.media-amazon.com/images/M/MV5BYzdjMDAxZGItMjI2My00ODA1LTlkNzItOWFjMDU5ZDJlYWY3XkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+    "genres": ["Sci-Fi", "Drama", "Adventure"],
+    "actors": [
+      "Matthew McConaughey",
+      "Anne Hathaway",
+      "Jessica Chastain",
+      "Michael Caine"
+    ],
+    "writer": "Jonathan Nolan, Christopher Nolan",
+    "director": "Christopher Nolan",
+    "duration": 169,
+    "releaseYear": 2014,
+    "description": "A group of explorers travel through a wormhole in space in an attempt to ensure humanity's survival."
+  },
+  {
+    "id": 4,
+    "title": "Avengers: Endgame",
+    "poster": "https://image.tmdb.org/t/p/w500/ulzhLuWrPK07P1YkdWQLZnQh1JL.jpg",
+    "genres": ["Action", "Sci-Fi", "Adventure"],
+    "actors": [
+      "Robert Downey Jr.",
+      "Chris Evans",
+      "Mark Ruffalo",
+      "Scarlett Johansson"
+    ],
+    "writer": "Christopher Markus, Stephen McFeely",
+    "director": "Anthony Russo, Joe Russo",
+    "duration": 181,
+    "releaseYear": 2019,
+    "description": "After the devastating events of Infinity War, the Avengers assemble once more to reverse Thanos' actions and restore balance."
+  },
+  {
+    "id": 5,
+    "title": "Titanic",
+    "poster": "https://image.tmdb.org/t/p/w500/9xjZS2rlVxm8SFx8kPC3aIGCOYQ.jpg",
+    "genres": ["Drama", "Romance", "Historical"],
+    "actors": [
+      "Leonardo DiCaprio",
+      "Kate Winslet",
+      "Billy Zane",
+      "Kathy Bates"
+    ],
+    "writer": "James Cameron",
+    "director": "James Cameron",
+    "duration": 195,
+    "releaseYear": 1997,
+    "description": "A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic."
+  },
+  {
+    "id": 6,
+    "title": "The Matrix",
+    "poster": "https://image.tmdb.org/t/p/w500/f89U3ADr1oiB1s9GkdPOEpXUk5H.jpg",
+    "genres": ["Action", "Sci-Fi", "Thriller"],
+    "actors": [
+      "Keanu Reeves",
+      "Laurence Fishburne",
+      "Carrie-Anne Moss",
+      "Hugo Weaving"
+    ],
+    "writer": "Lana Wachowski, Lilly Wachowski",
+    "director": "Lana Wachowski, Lilly Wachowski",
+    "duration": 136,
+    "releaseYear": 1999,
+    "description": "A computer hacker learns about the true nature of his reality and his role in the war against its controllers."
+  },
+  {
+    "id": 7,
+    "title": "The Shawshank Redemption",
+    "poster": "https://image.tmdb.org/t/p/w500/lyQBXzOQSuE59IsHyhrp0qIiPAz.jpg",
+    "genres": ["Drama", "Crime", "Historical"],
+    "actors": [
+      "Tim Robbins",
+      "Morgan Freeman",
+      "Bob Gunton",
+      "William Sadler"
+    ],
+    "writer": "Stephen King, Frank Darabont",
+    "director": "Frank Darabont",
+    "duration": 142,
+    "releaseYear": 1994,
+    "description": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency."
+  },
+  {
+    "id": 8,
+    "title": "Forrest Gump",
+    "poster": "https://image.tmdb.org/t/p/w500/saHP97rTPS5eLmrLQEcANmKrsFl.jpg",
+    "genres": ["Drama", "Romance", "Comedy"],
+    "actors": [
+      "Tom Hanks",
+      "Robin Wright",
+      "Gary Sinise",
+      "Sally Field"
+    ],
+    "writer": "Winston Groom, Eric Roth",
+    "director": "Robert Zemeckis",
+    "duration": 142,
+    "releaseYear": 1994,
+    "description": "The presidencies of Kennedy and Johnson, Vietnam, Watergate, and other history unfold through the perspective of an Alabama man with a low IQ."
+  },
+  {
+    "id": 9,
+    "title": "Gladiator",
+    "poster": "https://image.tmdb.org/t/p/w500/ty8TGRuvJLPUmAR1H1nRIsgwvim.jpg",
+    "genres": ["Action", "Drama", "Historical"],
+    "actors": [
+      "Russell Crowe",
+      "Joaquin Phoenix",
+      "Connie Nielsen",
+      "Oliver Reed"
+    ],
+    "writer": "David Franzoni, John Logan, William Nicholson",
+    "director": "Ridley Scott",
+    "duration": 155,
+    "releaseYear": 2000,
+    "description": "A former Roman General sets out to exact vengeance against the corrupt emperor who murdered his family and sent him into slavery."
+  },
+  {
+    "id": 10,
+    "title": "The Godfather",
+    "poster": "https://image.tmdb.org/t/p/w500/3bhkrj58Vtu7enYsRolD1fZdja1.jpg",
+    "genres": ["Crime", "Drama", "Historical"],
+    "actors": [
+      "Marlon Brando",
+      "Al Pacino",
+      "James Caan",
+      "Diane Keaton"
+    ],
+    "writer": "Mario Puzo, Francis Ford Coppola",
+    "director": "Francis Ford Coppola",
+    "duration": 175,
+    "releaseYear": 1972,
+    "description": "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son."
+  },
+  {
+    "id": 11,
+    "title": "Pulp Fiction",
+    "poster": "https://m.media-amazon.com/images/M/MV5BYTViYTE3ZGQtNDBlMC00ZTAyLTkyODMtZGRiZDg0MjA2YThkXkEyXkFqcGc@._V1_QL75_UY562_CR3,0,380,562_.jpg",
+    "genres": ["Crime", "Drama", "Comedy"],
+    "actors": [
+      "John Travolta",
+      "Uma Thurman",
+      "Samuel L. Jackson",
+      "Bruce Willis"
+    ],
+    "writer": "Quentin Tarantino, Roger Avary",
+    "director": "Quentin Tarantino",
+    "duration": 154,
+    "releaseYear": 1994,
+    "description": "The lives of two mob hitmen, a boxer, a gangster's wife, and a pair of diner bandits intertwine in four tales of violence and redemption."
+  },
+  {
+    "id": 12,
+    "title": "Fight Club",
+    "poster": "https://image.tmdb.org/t/p/w500/bptfVGEQuv6vDTIMVCHjJ9Dz8PX.jpg",
+    "genres": ["Drama", "Thriller", "Crime"],
+    "actors": [
+      "Edward Norton",
+      "Brad Pitt",
+      "Helena Bonham Carter",
+      "Meat Loaf"
+    ],
+    "writer": "Chuck Palahniuk, Jim Uhls",
+    "director": "David Fincher",
+    "duration": 139,
+    "releaseYear": 1999,
+    "description": "An insomniac office worker and a devil-may-care soap maker form an underground fight club that evolves into much more."
+  },
+  {
+    "id": 13,
+    "title": "The Lord of the Rings",
+    "poster": "https://m.media-amazon.com/images/M/MV5BMTZkMjBjNWMtZGI5OC00MGU0LTk4ZTItODg2NWM3NTVmNWQ4XkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+    "genres": ["Adventure", "Action", "Drama"],
+    "actors": [
+      "Elijah Wood",
+      "Viggo Mortensen",
+      "Ian McKellen",
+      "Orlando Bloom"
+    ],
+    "writer": "J.R.R. Tolkien, Fran Walsh, Philippa Boyens, Peter Jackson",
+    "director": "Peter Jackson",
+    "duration": 201,
+    "releaseYear": 2003,
+    "description": "Gandalf and Aragorn lead the World of Men against Sauron's army to draw his gaze from Frodo and Sam as they approach Mount Doom with the One Ring."
+  },
+  {
+    "id": 14,
+    "title": "Joker",
+    "poster": "https://image.tmdb.org/t/p/w500/udDclJoHjfjb8Ekgsd4FDteOkCU.jpg",
+    "genres": ["Crime", "Drama", "Thriller"],
+    "actors": [
+      "Joaquin Phoenix",
+      "Robert De Niro",
+      "Zazie Beetz",
+      "Frances Conroy"
+    ],
+    "writer": "Todd Phillips, Scott Silver",
+    "director": "Todd Phillips",
+    "duration": 122,
+    "releaseYear": 2019,
+    "description": "In Gotham City, mentally troubled comedian Arthur Fleck is disregarded and mistreated by society, leading him down a path of crime and chaos."
+  },
+  {
+    "id": 15,
+    "title": "The Avengers",
+    "poster": "https://image.tmdb.org/t/p/w500/RYMX2wcKCBAr24UyPD7xwmjaTn.jpg",
+    "genres": ["Action", "Sci-Fi", "Adventure"],
+    "actors": [
+      "Robert Downey Jr.",
+      "Chris Evans",
+      "Mark Ruffalo",
+      "Chris Hemsworth"
+    ],
+    "writer": "Joss Whedon, Zak Penn",
+    "director": "Joss Whedon",
+    "duration": 143,
+    "releaseYear": 2012,
+    "description": "Earth's mightiest heroes must come together and learn to fight as a team to stop the mischievous Loki and his alien army."
+  },
+  {
+    "id": 16,
+    "title": "Avatar",
+    "poster": "https://image.tmdb.org/t/p/w500/6EiRUJpuoeQPghrs3YNktfnqOVh.jpg",
+    "genres": ["Action", "Adventure", "Sci-Fi"],
+    "actors": [
+      "Sam Worthington",
+      "Zoe Saldana",
+      "Sigourney Weaver",
+      "Stephen Lang"
+    ],
+    "writer": "James Cameron",
+    "director": "James Cameron",
+    "duration": 162,
+    "releaseYear": 2009,
+    "description": "A paraplegic Marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home."
+  },
+  {
+    "id": 17,
+    "title": "Iron Man",
+    "poster": "https://image.tmdb.org/t/p/w500/78lPtwv72eTNqFW9COBYI0dWDJa.jpg",
+    "genres": ["Action", "Sci-Fi", "Adventure"],
+    "actors": [
+      "Robert Downey Jr.",
+      "Gwyneth Paltrow",
+      "Terrence Howard",
+      "Jeff Bridges"
+    ],
+    "writer": "Mark Fergus, Hawk Ostby, Art Marcum, Matt Holloway",
+    "director": "Jon Favreau",
+    "duration": 126,
+    "releaseYear": 2008,
+    "description": "After being held captive in an Afghan cave, billionaire engineer Tony Stark creates a unique weaponized suit of armor to fight evil."
+  },
+  {
+    "id": 18,
+    "title": "The Social Network",
+    "poster": "https://image.tmdb.org/t/p/w500/n0ybibhJtQ5icDqTp8eRytcIHJx.jpg",
+    "genres": ["Drama", "Historical", "Crime"],
+    "actors": [
+      "Jesse Eisenberg",
+      "Andrew Garfield",
+      "Justin Timberlake",
+      "Armie Hammer"
+    ],
+    "writer": "Aaron Sorkin",
+    "director": "David Fincher",
+    "duration": 120,
+    "releaseYear": 2010,
+    "description": "Harvard student Mark Zuckerberg creates the social networking site that would become known as Facebook, but is later sued by two brothers who claimed he stole their idea."
+  },
+  {
+    "id": 19,
+    "title": "The Silence of the Lambs",
+    "poster": "https://image.tmdb.org/t/p/w500/rplLJ2hPcOQmkFhTqUte0MkEaO2.jpg",
+    "genres": ["Thriller", "Crime", "Drama"],
+    "actors": [
+      "Jodie Foster",
+      "Anthony Hopkins",
+      "Scott Glenn",
+      "Ted Levine"
+    ],
+    "writer": "Ted Tally",
+    "director": "Jonathan Demme",
+    "duration": 118,
+    "releaseYear": 1991,
+    "description": "A young F.B.I. cadet must confide in an incarcerated and manipulative killer to receive his help on catching another serial killer."
+  },
+  {
+    "id": 20,
+    "title": "The Lion King",
+    "poster": "https://image.tmdb.org/t/p/w500/sKCr78MXSLixwmZ8DyJLrpMsd15.jpg",
+    "genres": ["Animation", "Adventure", "Drama"],
+    "actors": [
+      "Matthew Broderick",
+      "Jeremy Irons",
+      "James Earl Jones",
+      "Moira Kelly"
+    ],
+    "writer": "Irene Mecchi, Jonathan Roberts, Linda Woolverton",
+    "director": "Roger Allers, Rob Minkoff",
+    "duration": 88,
+    "releaseYear": 1994,
+    "description": "Lion prince Simba and his father are targeted by his bitter uncle, who wants to ascend the throne himself."
+  },
+  {
+    "id": 21,
+    "title": "Finding Nemo",
+    "poster": "https://image.tmdb.org/t/p/w500/eHuGQ10FUzK1mdOY69wF5pGgEf5.jpg",
+    "genres": ["Animation", "Adventure", "Comedy"],
+    "actors": [
+      "Albert Brooks",
+      "Ellen DeGeneres",
+      "Alexander Gould",
+      "Willem Dafoe"
+    ],
+    "writer": "Andrew Stanton, Bob Peterson, David Reynolds",
+    "director": "Andrew Stanton, Lee Unkrich",
+    "duration": 100,
+    "releaseYear": 2003,
+    "description": "After his son is captured in the Great Barrier Reef and taken to Sydney, a timid clownfish sets out on a journey to bring him home."
+  },
+  {
+    "id": 22,
+    "title": "Up",
+    "poster": "https://m.media-amazon.com/images/M/MV5BNmI1ZTc5MWMtMDYyOS00ZDc2LTkzOTAtNjQ4NWIxNjYyNDgzXkEyXkFqcGc@._V1_QL75_UX380_CR0,1,380,562_.jpg",
+    "genres": ["Animation", "Adventure", "Comedy"],
+    "actors": [
+      "Edward Asner",
+      "Jordan Nagai",
+      "John Ratzenberger",
+      "Christopher Plummer"
+    ],
+    "writer": "Bob Peterson, Pete Docter, Tom McCarthy",
+    "director": "Pete Docter, Bob Peterson",
+    "duration": 96,
+    "releaseYear": 2009,
+    "description": "78-year-old Carl sets out to fulfill his lifelong dream to see the wilds of South America by tying thousands of balloons to his house."
+  },
+  {
+    "id": 23,
+    "title": "Coco",
+    "poster": "https://image.tmdb.org/t/p/w500/gGEsBPAijhVUFoiNpgZXqRVWJt2.jpg",
+    "genres": ["Animation", "Adventure", "Comedy"],
+    "actors": [
+      "Anthony Gonzalez",
+      "Gael García Bernal",
+      "Benjamin Bratt",
+      "Alanna Ubach"
+    ],
+    "writer": "Lee Unkrich, Jason Katz, Matthew Aldrich, Adrian Molina",
+    "director": "Lee Unkrich, Adrian Molina",
+    "duration": 105,
+    "releaseYear": 2017,
+    "description": "Aspiring musician Miguel, confronted with his family's ancestral ban on music, enters the Land of the Dead to find his great-great-grandfather."
+  },
+  {
+    "id": 24,
+    "title": "Toy Story",
+    "poster": "https://image.tmdb.org/t/p/w500/uXDfjJbdP4ijW5hWSBrPrlKpxab.jpg",
+    "genres": ["Animation", "Adventure", "Comedy"],
+    "actors": [
+      "Tom Hanks",
+      "Tim Allen",
+      "Don Rickles",
+      "Jim Varney"
+    ],
+    "writer": "John Lasseter, Pete Docter, Andrew Stanton, Joe Ranft",
+    "director": "John Lasseter",
+    "duration": 81,
+    "releaseYear": 1995,
+    "description": "A cowboy doll is profoundly threatened and jealous when a new spaceman figure supplants him as top toy in a boy's room."
+  },
+  {
+    "id": 25,
+    "title": "Zootopia",
+    "poster": "https://image.tmdb.org/t/p/w500/hlK0e0wAQ3VLuJcsfIYPvb4JVud.jpg",
+    "genres": ["Animation", "Adventure", "Comedy"],
+    "actors": [
+      "Ginnifer Goodwin",
+      "Jason Bateman",
+      "Idris Elba",
+      "Jenny Slate"
+    ],
+    "writer": "Jared Bush, Phil Johnston",
+    "director": "Byron Howard, Rich Moore",
+    "duration": 108,
+    "releaseYear": 2016,
+    "description": "In a city of anthropomorphic animals, a rookie bunny cop and a cynical con artist fox must work together to uncover a conspiracy."
+  },
+  {
+    "id": 26,
+    "title": "Shrek",
+    "poster": "https://image.tmdb.org/t/p/w500/iB64vpL3dIObOtMZgX3RqdVdQDc.jpg",
+    "genres": ["Animation", "Adventure", "Comedy"],
+    "actors": [
+      "Mike Myers",
+      "Eddie Murphy",
+      "Cameron Diaz",
+      "John Lithgow"
+    ],
+    "writer": "William Steig, Ted Elliott, Terry Rossio",
+    "director": "Andrew Adamson, Vicky Jenson",
+    "duration": 90,
+    "releaseYear": 2001,
+    "description": "A mean lord exiles fairytale creatures to the swamp of a grumpy ogre, who must go on a quest and rescue a princess for the lord in order to get his land back."
+  },
+  {
+    "id": 27,
+    "title": "Frozen",
+    "poster": "https://image.tmdb.org/t/p/w500/kgwjIb2JDHRhNk13lmSxiClFjVk.jpg",
+    "genres": ["Animation", "Adventure", "Comedy"],
+    "actors": [
+      "Kristen Bell",
+      "Idina Menzel",
+      "Josh Gad",
+      "Jonathan Groff"
+    ],
+    "writer": "Jennifer Lee",
+    "director": "Chris Buck, Jennifer Lee",
+    "duration": 102,
+    "releaseYear": 2013,
+    "description": "When the newly crowned Queen Elsa accidentally uses her power to turn things into ice to curse her home in infinite winter, her sister Anna teams up with a mountain man, his playful reindeer, and a snowman to change the weather condition."
+  },
+  {
+    "id": 28,
+    "title": "Inside Out",
+    "poster": "https://m.media-amazon.com/images/M/MV5BOTgxMDQwMDk0OF5BMl5BanBnXkFtZTgwNjU5OTg2NDE@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+    "genres": ["Animation", "Comedy", "Adventure"],
+    "actors": [
+      "Amy Poehler",
+      "Phyllis Smith",
+      "Richard Kind",
+      "Bill Hader"
+    ],
+    "writer": "Pete Docter, Meg LeFauve, Josh Cooley",
+    "director": "Pete Docter, Ronnie del Carmen",
+    "duration": 95,
+    "releaseYear": 2015,
+    "description": "After young Riley is uprooted from her Midwest life and moved to San Francisco, her emotions - Joy, Fear, Anger, Disgust and Sadness - conflict on how best to navigate a new city, house, and school."
+  },
+  {
+    "id": 29,
+    "title": "Monsters, Inc.",
+    "poster": "https://image.tmdb.org/t/p/w500/sgheSKxZkttIe8ONsf2sWXPgip3.jpg",
+    "genres": ["Animation", "Comedy", "Adventure"],
+    "actors": [
+      "John Goodman",
+      "Billy Crystal",
+      "Mary Gibbs",
+      "Steve Buscemi"
+    ],
+    "writer": "Pete Docter, Jill Culton, Jeff Pidgeon, Ralph Eggleston",
+    "director": "Pete Docter, David Silverman, Lee Unkrich",
+    "duration": 92,
+    "releaseYear": 2001,
+    "description": "In order to power the city, monsters have to scare children so that they scream. However, the children are toxic to the monsters, and after a child gets through, two monsters realize things may not be what they think."
+  },
+  {
+    "id": 30,
+    "title": "Despicable Me",
+    "poster": "https://m.media-amazon.com/images/M/MV5BMTY3NjY0MTQ0Nl5BMl5BanBnXkFtZTcwMzQ2MTc0Mw@@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+    "genres": ["Animation", "Comedy", "Adventure"],
+    "actors": [
+      "Steve Carell",
+      "Jason Segel",
+      "Russell Brand",
+      "Julie Andrews"
+    ],
+    "writer": "Cinco Paul, Ken Daurio",
+    "director": "Pierre Coffin, Chris Renaud",
+    "duration": 95,
+    "releaseYear": 2010,
+    "description": "When a criminal mastermind uses a trio of orphan girls as pawns for a grand scheme, he finds their love is profoundly changing him for the better."
+  },
+  {
+    "id": 31,
+    "title": "The Conjuring",
+    "poster": "https://image.tmdb.org/t/p/w500/wVYREutTvI2tmxr6ujrHT704wGF.jpg",
+    "genres": ["Horror", "Thriller", "Historical"],
+    "actors": [
+      "Vera Farmiga",
+      "Patrick Wilson",
+      "Lili Taylor",
+      "Ron Livingston"
+    ],
+    "writer": "Chad Hayes, Carey W. Hayes",
+    "director": "James Wan",
+    "duration": 112,
+    "releaseYear": 2013,
+    "description": "Paranormal investigators Ed and Lorraine Warren work to help a family terrorized by a dark presence in their farmhouse."
+  },
+  {
+    "id": 32,
+    "title": "Get Out",
+    "poster": "https://m.media-amazon.com/images/M/MV5BMjUxMDQwNjcyNl5BMl5BanBnXkFtZTgwNzcwMzc0MTI@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+    "genres": ["Horror", "Thriller", "Comedy"],
+    "actors": [
+      "Daniel Kaluuya",
+      "Allison Williams",
+      "Bradley Whitford",
+      "Catherine Keener"
+    ],
+    "writer": "Jordan Peele",
+    "director": "Jordan Peele",
+    "duration": 104,
+    "releaseYear": 2017,
+    "description": "A young African-American visits his white girlfriend's parents for the weekend, where his simmering uneasiness about their reception of him eventually reaches a boiling point."
+  },
+  {
+    "id": 33,
+    "title": "A Quiet Place",
+    "poster": "https://image.tmdb.org/t/p/w500/nAU74GmpUk7t5iklEp3bufwDq4n.jpg",
+    "genres": ["Horror", "Thriller", "Drama"],
+    "actors": [
+      "Emily Blunt",
+      "John Krasinski",
+      "Millicent Simmonds",
+      "Noah Jupe"
+    ],
+    "writer": "Bryan Woods, Scott Beck, John Krasinski",
+    "director": "John Krasinski",
+    "duration": 90,
+    "releaseYear": 2018,
+    "description": "In a post-apocalyptic world, a family is forced to live in silence while hiding from monsters with ultra-sensitive hearing."
+  },
+  {
+    "id": 34,
+    "title": "It",
+    "poster": "https://image.tmdb.org/t/p/w500/9E2y5Q7WlCVNEhP5GiVTjhEhx1o.jpg",
+    "genres": ["Horror", "Thriller", "Drama"],
+    "actors": [
+      "Bill Skarsgård",
+      "Jaeden Martell",
+      "Finn Wolfhard",
+      "Sophia Lillis"
+    ],
+    "writer": "Chase Palmer, Cary Fukunaga, Gary Dauberman",
+    "director": "Andy Muschietti",
+    "duration": 135,
+    "releaseYear": 2017,
+    "description": "In the summer of 1989, a group of bullied kids band together to destroy a shape-shifting monster, which disguises itself as a clown and preys on the children of Derry, their small Maine town."
+  },
+  {
+    "id": 35,
+    "title": "Hereditary",
+    "poster": "https://image.tmdb.org/t/p/w500/p9fmuz2Oj3HtEJEqbIwkFGUhVXD.jpg",
+    "genres": ["Horror", "Drama", "Thriller"],
+    "actors": [
+      "Toni Collette",
+      "Alex Wolff",
+      "Milly Shapiro",
+      "Gabriel Byrne"
+    ],
+    "writer": "Ari Aster",
+    "director": "Ari Aster",
+    "duration": 127,
+    "releaseYear": 2018,
+    "description": "A grieving family is haunted by tragic and disturbing occurrences."
+  },
+  {
+    "id": 36,
+    "title": "Deadpool",
+    "poster": "https://m.media-amazon.com/images/M/MV5BNzY3ZWU5NGQtOTViNC00ZWVmLTliNjAtNzViNzlkZWQ4YzQ4XkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg",
+    "genres": ["Action", "Comedy", "Adventure"],
+    "actors": [
+      "Ryan Reynolds",
+      "Morena Baccarin",
+      "Ed Skrein",
+      "T.J. Miller"
+    ],
+    "writer": "Rhett Reese, Paul Wernick",
+    "director": "Tim Miller",
+    "duration": 108,
+    "releaseYear": 2016,
+    "description": "A wisecracking mercenary gets experimented on and becomes immortal but ugly, and sets out to track down the man who ruined his looks."
+  },
+  {
+    "id": 37,
+    "title": "Knives Out",
+    "poster": "https://m.media-amazon.com/images/M/MV5BZDU5ZTRkYmItZjg0Mi00ZTQwLThjMWItNWM3MTMxMzVjZmVjXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+    "genres": ["Crime", "Comedy", "Thriller"],
+    "actors": [
+      "Daniel Craig",
+      "Chris Evans",
+      "Ana de Armas",
+      "Jamie Lee Curtis"
+    ],
+    "writer": "Rian Johnson",
+    "director": "Rian Johnson",
+    "duration": 131,
+    "releaseYear": 2019,
+    "description": "A detective investigates the death of a patriarch of an eccentric, combative family."
+  }
+]

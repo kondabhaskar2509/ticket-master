@@ -1,0 +1,309 @@
+export const eventdata = [
+  {
+    id: 1,
+    title: "Chennai Book Fair 2025",
+    poster:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwGqsbtNnsM2I4xYs8nMINFrbW96aXZZJEfQ&s",
+    city: "Chennai",
+    venue: "YMCA Grounds, Nandanam & Chennai Trade Centre",
+    timeframe: "Late Dec 2024 - Jan 2025",
+    description:
+      "One of India's largest book fairs featuring English and Tamil publishers, cultural sessions, and author talks.",
+    type: "Chennai Events",
+    organizer: "BAPASI",
+  },
+  {
+    id: 2,
+    title: "Chennai Rainbow Pride March 2024",
+    poster:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSM41YXQj3TaSpPxAPPThOUlTwjoVR4oySRMA&s",
+    city: "Chennai",
+    venue: "Rajarathinam Stadium → Egmore",
+    timeframe: "June 30, 2024",
+    description:
+      "16th edition pride march with around 5,000 participants celebrating LGBTQIA+ rights.",
+    type: "Chennai Events",
+    organizer: "TN Rainbow Coalition",
+  },
+  {
+    id: 3,
+    title: "Saarang Cultural Fest",
+    poster:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcRF5VniGI0jBRNB8F39W-GdLkpKpaKEiBZQ&s",
+    city: "Chennai",
+    venue: "IIT Madras",
+    timeframe: "Jan 2024",
+    description:
+      "3 day inter-college fest with concerts, variety shows, and workshops.",
+    type: "Other College Concerts",
+    organizer: "Saarang IIT Madras",
+  },
+
+  {
+    id: 4,
+    title: "Vibrance Proshow Chennai 2025",
+    poster:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrwV8Q5AIXF-ohgtKA7P3uhebbdfsgeYB2XQ&s",
+    city: "Chennai",
+    venue: "VIT Chennai Campus",
+    timeframe: "2025",
+    description:
+      "VIT Chennai's annual cultural proshow featuring top DJs and bands.",
+    type: "Other College Concerts",
+    organizer: "Vibrance  VIT Chennai",
+  },
+
+  {
+    id: 5,
+    title: "Festember '24 EDM Nite - Holy C",
+    poster:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQn3M9kMn8gE6lkvnWbATozeHvh9F-lao-yYQ&s", // placeholder from Instagram
+    city: "Tiruchirappalli",
+    venue: "GJCH Auditorium, NIT Trichy",
+    timeframe: "September 20, 2024",
+    description:
+      "Pop night headlined by Neeti Mohan at the 50th Festember edition.",
+    type: "Festember Concerts",
+    organizer: "Festember NIT Trichy",
+  },
+  {
+    id: 6,
+    title: "Festember '24 Fusion Nite - Lost Fireflies",
+    poster:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQ-a84fLVCRowDnEydXD8wBGBIy6RbmR_NUw&s",
+    city: "Tiruchirappalli",
+    venue: "GJCH Auditorium, NIT Trichy",
+    timeframe: "September 19, 2024",
+    description: "Rock Nite featuring Thaikkudam Bridge at Festember’24.",
+    type: "Festember Concerts",
+    organizer: "Festember NIT Trichy",
+  },
+  {
+    id: 7,
+    title: "Festember '24 - Karthik Is Live",
+    poster:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAGpFy_y73IQonI2GaCg11mQaDjv5I-PoALw&s",
+    city: "Tiruchirappalli",
+    venue: "GJCH Auditorium, NIT Trichy",
+    timeframe: "September 18, 2024",
+    description: "EDM night headlined by DJ Papa Balooshy.",
+    type: "Festember Concerts",
+    organizer: "Festember NIT Trichy",
+  },
+
+  {
+    id: 8,
+    title: "Pragyan '25 - Proshow Mysore Express",
+    poster:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaWIynGPrFu-Z23BqBghgFgn3U5iwSRp7MEw&s",
+    city: "Tiruchirappalli",
+    venue: "GJCH Auditorium, NIT Trichy",
+    timeframe: "March 22, 2025",
+    description: "Folk-fusion performance by Mysore Express at NITTFEST '25.",
+    type: "Pragyan Concerts",
+    organizer: "Pragyan NIT Trichy",
+  },
+  {
+    id: 9,
+    title: "Pragyan '25 - Proshow Antara Mitra",
+    poster:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMAePJoP6w2c6oiLRT9DwUzDu1vQOBo4zNig&s",
+    city: "Tiruchirappalli",
+    venue: "CEESAT Ground, NIT Trichy",
+    timeframe: "March 23, 2025",
+    description: "Bollywood night featuring playback singer Antara Mitra.",
+    type: "Pragyan Concerts",
+    organizer: "Pragyan NIT Trichy",
+  },
+  {
+    id: 10,
+    title: "Nittfest '25 - Proshow  Andrea Jeremiah ",
+    poster:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCf1r80rBvrT73em65iaoGIlaWsXyA14pajA&s",
+    city: "Tiruchirappalli",
+    venue: "GJCH Auditorium, NIT Trichy",
+    timeframe: "March 23, 2025",
+    description: "Bollywood night featuring playback singer Antara Mitra.",
+    type: "Nittfest Concerts",
+    organizer: "Nittfest NIT Trichy",
+  },
+
+  {
+    id: 11,
+    title: "Global Conference on Climate Change",
+    poster:
+      "https://sndt.ac.in/images/events/2024/iccc-2025/iccc-2025-banner-small.jpg",
+    city: "Chennai",
+    venue: "Indian Institute of Technology, Madras",
+    timeframe: "October 7, 2025",
+    description:
+      "International conference on climate change, green technologies and sustainable energy practices.",
+    type: "Other College Concerts",
+    organizer: "ARSSS",
+  },
+  {
+    id: 12,
+    title: "Murugan Devotees Conference, Madurai",
+    poster:
+      "https://swarajya.gumlet.io/swarajya/2025-06-24/8ign5r6p/Murugan-Munadu.jpg?w=610&q=50&compress=true&format=auto",
+    city: "Madurai",
+    venue: "Amma Thidal, Vandiyur",
+    timeframe: "June 22, 2025",
+    description:
+      "A massive religious gathering celebrating Lord Murugan with cultural performances and rituals.",
+    type: "Madurai Events",
+    organizer: "Hindu Munnani",
+  },
+  {
+    id: 13,
+    title: "Chithirai Festival, Madurai",
+    poster:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREMvnxUGHNQNa1iPkan7sXTutHjh3wj-Hnwg&s",
+    city: "Madurai",
+    venue: "Meenakshi Temple",
+    timeframe: "April 2025",
+    description:
+      "A month-long celebration featuring Meenakshi Thirukalyanam and celestial processions in Madurai.",
+    type: "Madurai Events",
+    organizer: "Madurai Corporation & Temple Board",
+  },
+  {
+    id: 14,
+    title: "Mahamaham Festival",
+    poster:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBKzl8xi3DJEVcdwyxNw74K9Fqm-4rsQpPDw&s",
+    city: "Kumbakonam , Madurai",
+    venue: "Mahamaham Tank",
+    timeframe: "March 2028",
+    type: "Madurai Events",
+    organizer: "Tamil Nadu Hindu Religious & Charitable Endowments Department",
+  },
+  {
+    id: 15,
+    title: "Summer Festival in The Nilgiris",
+    poster:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0OGkn_eiHfaArmSHeI-GlVE4Dzg40AXFjBw&s",
+    city: "Ooty",
+    venue: "Botanical Garden & Ooty Lake",
+    timeframe: "May 2025",
+    description:
+      "Annual summer celebration with flower shows, boat races, fruit displays, and local cultural events.",
+    type: "Tamilnadu Events",
+    organizer: "Tamil Nadu Tourism Development Corporation",
+  },
+  {
+    id: 16,
+    title: "10th Tamil Nadu International Balloon Festival",
+    poster:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVp8FF562gsh0SXtp_aWEMbBqUcCOUUHR9JCbG9pZMRV8MeFzGlAYE7Bw5JE72FoSPMis&usqp=CAU",
+    city: "Chennai",
+    venue: "Kalaignar Centenary Stadium",
+    timeframe: "Jan 15, 2025",
+    description:
+      "A multiday air-balloon event hosting global participants with music, food, and cultural shows.",
+    type: "Chennai Events",
+    organizer: "TN Tourism",
+  },
+  {
+    id: 17,
+    title: "Trichy Thiruvizha 2025",
+    poster:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQa8pNFa8g2ll0oN9vIiro1RofmZowZMqxeEg&s",
+    city: "Tiruchirappalli",
+    venue: "Main Road, Cantonment",
+    timeframe: "January 11–12, 2025",
+    description:
+      "Annual city celebration with stalls, parades, folk performances, and traditional Tamil cuisine.",
+    type: "Tamilnadu Events",
+    organizer: "Trichy Corporation & CII",
+  },
+  {
+    id: 18,
+    title: "Pongal Festival Celebration 2025",
+    poster:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9atm4FYTK-4ggWaFxnOkkgrIGGx9mFWG92w&s",
+    city: "Thanjavur",
+    venue: "Collectorate Complex Grounds",
+    timeframe: "January 14, 2025",
+    description:
+      "Tamil harvest celebration including Pongal preparation contest, Kolam, bullock-cart races and folk art.",
+    type: "Tamilnadu Events",
+    organizer: "TN Tourism & District Administration",
+  },
+
+  {
+    id: 19,
+    title: "Pragyan '25 Sand And Light Art - Vivek Patel ",
+    poster:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTkGqtqTRdab_FcciN9hlEHbbm7CFEqSr-Eg&s",
+    city: "Tiruchirappalli",
+    venue: "Barn Hall, NIT Trichy",
+    timeframe: "March 22, 2025",
+    description: "Folk-fusion performance by Mysore Express at NITTFEST '25.",
+    type: "Pragyan Concerts",
+    organizer: "Pragyan NIT Trichy",
+  },
+  {
+    id: 20,
+    title: "Nittfest '25 Candle Light Show - Gini  ",
+    poster:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbkag9d_gSJUXgsJtQZnqHR67eTEByHZhLzw&s",
+    city: "Tiruchirappalli",
+    venue: "GJCH Auditorium, NIT Trichy",
+    timeframe: "March 23, 2025",
+    description: "Bollywood night featuring playback singer Antara Mitra.",
+    type: "Nittfest Concerts",
+    organizer: "Nittfest NIT Trichy",
+  },
+  {
+    id: 21,
+    title: "Nittfest '25 - Neon Splash Party ",
+    poster:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQx9e_GafXVqPXmnfKQ16nmIaKVW9Sn7aD5uw&s",
+    city: "Tiruchirappalli",
+    venue: "GJCH Auditorium, NIT Trichy",
+    timeframe: "March 23, 2025",
+    description: "Bollywood night featuring playback singer Antara Mitra.",
+    type: "Nittfest Concerts",
+    organizer: "Nittfest NIT Trichy",
+  },
+  {
+    id: 22,
+    title: "Coimbatore Vizha 2025",
+    poster: "https://racemart.in/storage/poster/poster-1725963957894.jpg",
+    city: "Coimbatore",
+    venue: "Across the city",
+    timeframe: "January 4–12, 2025",
+    description:
+      "Annual cultural festival with concerts, art installations, food stalls, heritage walks and local city tours.",
+    type: "Coimbatore Events",
+    organizer: "Coimbatore District Administration & NGOs",
+  },
+  {
+    id: 23,
+    title: "Ilaiyaraaja Truly Live",
+    poster:" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrY7Y1x4KaHv-eS_xkDaJwLQYVRP41GoaAL7-hGr3CBP7CeYKc1cQJSijLAVKOGZfya-o&usqp=CAU",
+    city: "Coimbatore",
+    venue: "G Square Seven Hills City, Vivekanandapuram",
+    timeframe: "June 7, 2025",
+    description:
+      "Experience the legendary maestro Ilaiyaraaja live with SP Charan, Shwetha Mohan & grand orchestra—an electrifying musical evening.",
+    type: "Coimbatore Events",
+    organizer: "Mouna Raagam Murali & Event Partners",
+  },
+  {
+    id: 24,
+    title: "Thaipusam Celebration ",
+    poster:"https://www.omspiritualshop.com/cdn/shop/articles/2_11_5aca8a7a-52b3-4b53-b3ef-72acf643c4a7_1200x1200.jpg?v=1738740430",
+    city: "Palani",
+    venue: "Murugan Temples across Tamil Nadu",
+    timeframe: "February 11, 2025",
+    description:
+      "Detailed rituals and traditions of Thaipusam festival—milk offerings, kavadi, body‑piercing and traditional music.",
+    type: "Coimbatore Events",
+    organizer: "Local Temple Committees",
+  },
+];
+
+ export const concerts = ["Festember Concerts","Nittfest Concerts","Pragyan Concerts","Other College Concerts"]
+ export const events = ["Chennai Events","Madurai Events","Tamilnadu Events","Coimbatore Events"]

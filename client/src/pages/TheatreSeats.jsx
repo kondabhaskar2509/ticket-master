@@ -1,0 +1,275 @@
+import React, { useState, useEffect, useContext } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
+import { AuthContext } from "../context/AuthContext";
+
+const categories = [
+  { name: "Recliner", startRow: 0, endRow: 1, price: 250 },
+  { name: "Balcony", startRow: 3, endRow: 8, price: 180 },
+  { name: "Lower Class", startRow: 10, endRow: 15, price: 130 },
+];
+
+const getSeatCategory = (row) => {
+  for (const category of categories) {
+    if (row >= category.startRow && row <= category.endRow) {
+      return category.name;
+    }
+  }
+  return null;
+};
+
+const rows = 16;
+const cols = 12;
+const rowLabels = Array.from({ length: rows }, (_, i) => String.fromCharCode(65 + i));
+const colLabels = Array.from({ length: cols }, (_, i) => (i + 1).toString());
+
+const seatBoxClass =
+  "w-10 h-10 sm:w-8 sm:h-8  rounded shadow text-base font-bold flex items-center justify-center";
+
+const TheatreSeats = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const { movieDetails, selectedTheatre, selectedSlot, bookingType } =
+    location.state || {};
+  const { activeuser } = useContext(AuthContext);
+
+  const [seatStatus, setSeatStatus] = useState(() => {
+    const status = {};
+    for (let r = 0; r < rows; r++) {
+      for (let c = 0; c < cols; c++) {
+        const seatKey = `${r}-${c}`;
+        if (getSeatCategory(r)) {
+          status[seatKey] = Math.random() < 0.2 ? "booked" : "available";
+        }
+      }
+    }
+    return status;
+  });
+
+  const [selectedSeats, setSelectedSeats] = useState([]);
+  const [selectedCategories, setSelectedCategories] = useState({
+    Recliner: 0,
+    Balcony: 0,
+    "Lower Class": 0,
+  });
+  const [totalPrice, setTotalPrice] = useState(0);
+
+  useEffect(() => {
+    const newSelectedCategories = { Recliner: 0, Balcony: 0, "Lower Class": 0 };
+    let newTotalPrice = 0;
+    selectedSeats.forEach((seatKey) => {
+      const [row] = seatKey.split("-").map(Number);
+      const category = getSeatCategory(row);
+      if (category) {
+        newSelectedCategories[category]++;
+        const categoryPrice = categories.find(
+          (cat) => cat.name === category
+        ).price;
+        newTotalPrice += categoryPrice;
+      }
+    });
+    setSelectedCategories(newSelectedCategories);
+    setTotalPrice(newTotalPrice);
+  }, [selectedSeats]);
+
+  const createBooking = async () => {
+    try {
+      const authToken = localStorage.getItem("authToken");
+      if (!authToken) {
+        throw new Error("Please login to book tickets.");
+      }
+
+      const userEmail =
+        typeof activeuser === "string"
+          ? activeuser
+          : (activeuser && activeuser.email) ||
+            localStorage.getItem("activeUser");
+      if (!userEmail) {
+        throw new Error("User email not found. Please login again.");
+      }
+
+      // Converting seats to alpha-numeric form 
+      const getAlphaSeat = (seatKey) => {
+        const [row, col] = seatKey.split("-").map(Number);
+        return String.fromCharCode(65 + row) + (col + 1);
+      };
+
+      const bookingData = {
+        email: userEmail,
+        type: bookingType || "movie",
+        details: {
+          title: movieDetails.title,
+          theatre: selectedTheatre.name,
+          slot: selectedSlot,
+          selectedDate: location.state?.selectedDate,
+          selectedSeats: selectedSeats.map(getAlphaSeat),
+          duration: movieDetails.duration,
+        },
+        price: totalPrice,
+        bookingStatus: null,
+        link_id: null,
+      };
+
+      const response = await fetch("http://localhost:5000/bookings", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${authToken}`,
+        },
+        body: JSON.stringify(bookingData),
+      });
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || "Failed to create booking");
+      }
+      const data = await response.json();
+
+      if (!data.bookingId) {
+        throw new Error("Booking ID not received from server");
+      }
+
+      return data.bookingId;
+    } catch (error) {
+      console.error("Error in createBooking:", error);
+      throw error;
+    }
+  };
+
+  const toggleSeat = (seatKey) => {
+    if (seatStatus[seatKey] === "booked") return;
+    if (selectedSeats.includes(seatKey)) {
+      setSelectedSeats(selectedSeats.filter((s) => s !== seatKey));
+      setSeatStatus((prev) => ({ ...prev, [seatKey]: "available" }));
+    } else {
+      setSelectedSeats([...selectedSeats, seatKey]);
+      setSeatStatus((prev) => ({ ...prev, [seatKey]: "selected" }));
+    }
+  };
+
+  const renderLegend = () => (
+    <div className="flex justify-center my-5 gap-4">
+      {[
+        { type: "available", label: "Available", color: "bg-gray-200" },
+        { type: "selected", label: "Selected", color: "bg-blue-900" },
+        { type: "booked", label: "Booked", color: "bg-red-800" },
+      ].map((item) => (
+        <div key={item.type} className="flex items-center">
+          <div className={`w-5 h-5 mr-1 rounded ${item.color}`}></div>
+          <span>{item.label}</span>
+        </div>
+      ))}
+    </div>
+  );
+
+  const renderCategoryInfo = () => (
+    <div className="flex justify-around my-5 flex-wrap gap-4">
+      {categories.map((cat) => (
+        <div key={cat.name} className="p-3 bg-gray-100 rounded m-1 shadow-sm">
+          <strong>{cat.name}</strong>: Rows{" "}
+          {String.fromCharCode(65 + cat.startRow)}-
+          {String.fromCharCode(65 + cat.endRow)} - ₹{cat.price}
+        </div>
+      ))}
+    </div>
+  );
+
+  const renderSeatGrid = () => (
+    <div className="w-full flex flex-col items-center px-8 md:px-32 lg:px-56">
+
+      <div className="w-full flex justify-center my-2  mb-6">
+        <div className="h-12 bg-gray-300 w-3/5 text-black font-bold text-2xl flex items-center justify-center rounded-md shadow-md mb-6">
+          Screen
+        </div>
+      </div>
+
+      {rowLabels.map((rowLabel, r) =>
+        getSeatCategory(r) ? (
+          <div key={rowLabel} className="flex items-center mb-1">
+            
+            <div className="flex gap-5">
+              {colLabels.map((colLabel, c) => {
+                const seatKey = `${r}-${c}`;
+                const status = seatStatus[seatKey];
+                let seatColor =
+                  status === "booked"
+                    ? "bg-red-800 text-white"
+                    : status === "selected"
+                    ? "bg-blue-900 text-white"
+                    : "bg-gray-200 text-black";
+                return (
+                  <button
+                    key={seatKey}
+                    className={`${seatBoxClass} ${seatColor} ${
+                      status === "booked"
+                        ? "cursor-not-allowed"
+                        : "hover:bg-blue-300"
+                    }`}
+                    disabled={status === "booked"}
+                    onClick={() => toggleSeat(seatKey)}>
+                    {rowLabel}
+                    {colLabel}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+        ) : null
+      )}
+    </div>
+  );
+
+  return (
+    <div className="max-w-4xl mx-auto my-8 p-5 bg-white text-black rounded-lg">
+      <h2 className="text-center mb-5 text-2xl font-bold">Select Your Seats</h2>
+      {renderSeatGrid()}
+      {renderLegend()}
+      <div className="border-t border-b border-dashed border-gray-300 py-4 my-5">
+        {renderCategoryInfo()}
+      </div>
+      <div className="flex justify-between items-center bg-white p-4 rounded-lg shadow-lg">
+        <div>
+          <h3 className="mb-2 text-lg font-bold">Selected Seats Summary</h3>
+          <div className="flex flex-wrap gap-2">
+            {Object.entries(selectedCategories).map(
+              ([category, count]) =>
+                count > 0 && (
+                  <div key={category} className="bg-white p-2 rounded">
+                    {category}: {count} seats
+                  </div>
+                )
+            )}
+          </div>
+        </div>
+        <div className="text-right">
+          <div className="text-sm text-gray-700">Total Amount</div>
+          <div className="text-2xl font-bold">₹{totalPrice}</div>
+          <button
+            className={`mt-2 text-white border-none py-2 px-5 rounded font-bold ${
+              selectedSeats.length > 0
+                ? "bg-pink-600 cursor-pointer"
+                : "bg-gray-600 cursor-not-allowed"
+            }`}
+            disabled={selectedSeats.length === 0}
+            onClick={async () => {
+              if (selectedSeats.length > 0) {
+                try {
+                  const bookingId = await createBooking();
+                  navigate("/ticket-summary", {
+                    state: {
+                      bookingId,
+                    },
+                  });
+                } catch (error) {
+                  console.error("Error creating booking:", error);
+                  alert("Error saving booking data: " + error.message);
+                }
+              }
+            }}>
+            Pay ₹{totalPrice}
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default TheatreSeats;

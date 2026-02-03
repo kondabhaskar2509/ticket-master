@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+@layer components {
+  .button {
+    @apply text-[20px] w-60 border-blue-600 border-3 rounded-full p-2 pt-1 pb-1 bg-[#f8f9fa] text-black font-bold cursor-pointer transition-transform duration-200 hover:scale-120;
+  }
+  .headingevents{
+    @apply text-[40px]  text-center  text-blue-900 font-bold;
+  }
+  .headingmovies{
+    @apply text-[40px] text-center  text-blue-900 font-bold;
+  }
+  .loginlabel{
+    @apply block text-lg font-semibold mb-2 text-black;
+  }
+  .logininput {
+    @apply w-full border border-gray-300 rounded-md p-3 text-black focus:outline-none focus:ring-2 focus:ring-blue-400
+  }
+}
+
+
+
+
