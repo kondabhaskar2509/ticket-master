@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { API_BASE_URL } from "../config/env";
 
 const concerts = [
   "Festember Concerts",
@@ -19,7 +20,7 @@ const Events = () => {
   const [eventdata, setEventdata] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/events")
+    fetch(API_BASE_URL + "/events")
       .then((res) => res.json())
       .then((data) => setEventdata(data))
       .catch(() => setEventdata([]));

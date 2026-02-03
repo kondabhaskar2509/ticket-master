@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
+import { API_BASE_URL } from "../../config/env";
 
 const MoviesDelete = () => {
   const [moviedata, setMoviedata] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/movies")
+    fetch(API_BASE_URL + "/movies")
       .then((res) => res.json())
       .then((data) => setMoviedata(data))
       .catch(() => setMoviedata([]));
@@ -15,7 +16,7 @@ const MoviesDelete = () => {
       const movieId = moviedata[index].id;
       try {
         const response = await fetch(
-          `http://localhost:5000/movies/${movieId}`,
+          `${API_BASE_URL}/movies/${movieId}`,
           { method: "DELETE" }
         );
         if (response.ok) {

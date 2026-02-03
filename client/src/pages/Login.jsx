@@ -2,9 +2,10 @@ import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { API_BASE_URL, APP_URL } from "../config/env";
 
 const DAUTH_CLIENT_ID = "8c6Bna.YrZM1M8GC";
-const DAUTH_REDIRECT_URI = "http://localhost:5173/signin";
+const DAUTH_REDIRECT_URI = APP_URL + "/signin";
 const DAUTH_SCOPE = "email openid profile user";
 const DAUTH_AUTH_URL = "https://auth.delta.nitt.edu/authorize";
 
@@ -31,7 +32,7 @@ const dauthUrl = `${DAUTH_AUTH_URL}?client_id=${encodeURIComponent(
 )}&state=${state}&nonce=${nonce}`;
 
 const MYAUTH_CLIENT_ID = "eITcLYBVbNw9rYsR"; 
-const MYAUTH_REDIRECT_URI = "http://localhost:5173/myauthsignin";
+const MYAUTH_REDIRECT_URI = APP_URL + "/myauthsignin";
 const myauthUrl = `http://localhost:5174/authorize?client_id=${MYAUTH_CLIENT_ID}&redirect_uri=${MYAUTH_REDIRECT_URI}`;
 
 const Login = () => {
@@ -62,7 +63,7 @@ const Login = () => {
   const handleLogin = () => {
     setError("");
     setSuccess("");
-    fetch("http://localhost:5000/login", {
+    fetch(API_BASE_URL + "/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, password }),

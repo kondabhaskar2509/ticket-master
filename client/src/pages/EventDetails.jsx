@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
+import { API_BASE_URL } from "../config/env";
 
 const EventDetails = () => {
   const { id } = useParams();
@@ -9,7 +10,7 @@ const EventDetails = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch(`http://localhost:5000/events/${id}`)
+    fetch(`${API_BASE_URL}/events/${id}`)
       .then((res) => res.json())
       .then((data) => setEvent(data))
       .catch(() => setEvent(null));
@@ -70,7 +71,7 @@ const EventDetails = () => {
           date: new Date().toISOString(),
         };
 
-        const response = await fetch("http://localhost:5000/bookings", {
+        const response = await fetch(API_BASE_URL + "/bookings", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
+import { API_BASE_URL } from "../config/env";
 
 const DAuthCallback = () => {
   const { setError, setSuccess, setStatus, setUser, setActiveuser, setToken } =
@@ -16,7 +17,7 @@ const DAuthCallback = () => {
     if (code) {
       setError("");
       setSuccess("");
-      fetch("http://localhost:5000/signin", {
+      fetch(API_BASE_URL + "/signin", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ code, state }),

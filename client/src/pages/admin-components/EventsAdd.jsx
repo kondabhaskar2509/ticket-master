@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { API_BASE_URL } from "../../config/env";
 
 const eventTypes = [
   "Festember Concerts",
@@ -31,7 +32,7 @@ const EventsAdd = ({ onEventAdded }) => {
   const handleEventSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:5000/events", {
+      const response = await fetch(API_BASE_URL + "/events", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(eventFormData),

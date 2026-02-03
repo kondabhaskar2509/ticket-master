@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import { useLocation } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
+import { API_BASE_URL } from "../config/env";
 
 const Payments = () => {
   const location = useLocation();
@@ -16,7 +17,7 @@ const Payments = () => {
       const userEmail = user?.email || activeuser || "";
       const userName = user?.name || "";
       const response = await fetch(
-        `http://localhost:5000/create-payment-link?totalAmount=${amount}&email=${userEmail}&username=${userName}`,
+        `${API_BASE_URL}/create-payment-link?totalAmount=${amount}&email=${userEmail}&username=${userName}`,
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -27,7 +28,7 @@ const Payments = () => {
       if (data.link_url && data.link_id) {
         try {
           const userEmail = user?.email || activeuser || "";
-          await fetch("http://localhost:5000/addpaymentdetails", {
+          await fetch(API_BASE_URL + "/addpaymentdetails", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({

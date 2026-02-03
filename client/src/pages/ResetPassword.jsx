@@ -2,6 +2,7 @@ import React, { useState, useContext, useEffect } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useNavigate, useLocation } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
+import { API_BASE_URL } from "../config/env";
 
 const ResetPassword = () => {
   const { success, setSuccess, error, setError } = useContext(AuthContext);
@@ -39,7 +40,7 @@ const ResetPassword = () => {
       return;
     }
 
-    fetch("http://localhost:5000/reset-password", {
+    fetch(API_BASE_URL + "/reset-password", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, newPassword, newConfirmPassword }),

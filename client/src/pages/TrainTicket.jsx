@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext.jsx";
+import { API_BASE_URL } from "../config/env";
 
 const BookTrainTicket = () => {
   const location = useLocation();
@@ -116,7 +117,7 @@ const BookTrainTicket = () => {
     };
 
     try {
-      const response = await fetch("http://localhost:5000/bookings", {
+      const response = await fetch(API_BASE_URL + "/bookings", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

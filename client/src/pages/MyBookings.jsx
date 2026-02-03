@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
+import { API_BASE_URL } from "../config/env";
 
 const Bookings = () => {
   const [bookings, setBookings] = useState([]);
@@ -23,7 +24,7 @@ const Bookings = () => {
         }
 
         const response = await fetch(
-          `http://localhost:5000/bookings/user/${email}`,
+          `${API_BASE_URL}/bookings/user/${email}`,
           {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("authToken")}`,

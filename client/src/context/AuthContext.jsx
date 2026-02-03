@@ -1,4 +1,5 @@
 import React, { createContext, useState,   useEffect } from "react";
+import { API_BASE_URL } from "../config/env";
 export const AuthContext = createContext();
 
 const AuthProvider = (props) => {
@@ -25,7 +26,7 @@ const AuthProvider = (props) => {
     const verifyToken = async () => {
       if (token) {
         try {
-          const response = await fetch("http://localhost:5000/verify-token", {
+          const response = await fetch(API_BASE_URL + "/verify-token", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",

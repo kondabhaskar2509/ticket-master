@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
+import { API_BASE_URL } from "../config/env";
 
 const TransactionHistory = () => {
   const [payments, setPayments] = useState([]);
@@ -24,7 +25,7 @@ const TransactionHistory = () => {
         }
         
         const response = await fetch(
-          `http://localhost:5000/payments/user/${email}`,
+          `${API_BASE_URL}/payments/user/${email}`,
           {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("authToken")}`,

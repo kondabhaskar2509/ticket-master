@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { API_BASE_URL } from "../../config/env";
 
 const AllBookings = () => {
   const [allBookings, setAllBookings] = useState({});
@@ -11,7 +12,7 @@ const AllBookings = () => {
   const fetchAllBookings = async () => {
     setLoadingBookings(true);
     try {
-      const response = await fetch("http://localhost:5000/bookings/admin/all", {
+      const response = await fetch(API_BASE_URL + "/bookings/admin/all", {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("authToken")}`,
         },

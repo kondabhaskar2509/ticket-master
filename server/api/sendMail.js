@@ -17,7 +17,7 @@ function setupMail(app) {
       if (type === "reset") {
 
         // Password reset email
-        const resetLink = `http://localhost:5173/reset-password?email=${email}`;
+        const resetLink = `${process.env.FRONTEND}/reset-password?email=${email}`;
         options = {
           from: process.env.EMAIL_USER,
           to: email,

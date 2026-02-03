@@ -22,8 +22,8 @@ function setupCashfree(app, paymentCollection) {
         link_purpose: "Payment for Tickets",
         link_id: linkId,
         link_meta: {
-          notify_url: "http://localhost:5000/cashfree-webhook",
-          return_url: "http://localhost:5173/payment-status",
+          notify_url: `${process.env.BACKEND}/cashfree-webhook`,
+          return_url: `${process.env.FRONTEND}/payment-status`,
           upi_intent: false,
         },
         payment_methods: ["upi"],
@@ -39,7 +39,7 @@ function setupCashfree(app, paymentCollection) {
         link_notes: body,
       };
 
-      const  response = await axios.post(
+      const response = await axios.post(
         "https://sandbox.cashfree.com/pg/links",
         requestBody,
         {
@@ -78,7 +78,7 @@ function setupCashfree(app, paymentCollection) {
     }
   });
 
-  app.post("/addpaymentdetails", async  (req, res) => {
+  app.post("/addpaymentdetails", async (req, res) => {
     try {
       const { bookingId, email, amount, linkId } = req.body;
 
