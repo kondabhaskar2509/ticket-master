@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { API_BASE_URL } from "../config/env";
+import { BACKEND } from "../config/env";
 
 const genres = [
   "Action",
@@ -21,7 +21,7 @@ const Movies = () => {
   const [moviedata, setMoviedata] = useState([]);
 
   useEffect(() => {
-    fetch(API_BASE_URL + "/movies")
+    fetch(BACKEND + "/movies")
       .then((res) => res.json())
       .then((data) => setMoviedata(data))
       .catch(() => setMoviedata([]));

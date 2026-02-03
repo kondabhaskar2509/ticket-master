@@ -2,10 +2,10 @@ import React, { useContext, useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
-import { API_BASE_URL, APP_URL } from "../config/env";
+import { BACKEND, FRONTEND } from "../config/env";
 
 const DAUTH_CLIENT_ID = "8c6Bna.YrZM1M8GC";
-const DAUTH_REDIRECT_URI = APP_URL + "/signin";
+const DAUTH_REDIRECT_URI = FRONTEND + "/signin";
 const DAUTH_SCOPE = "email openid profile user";
 const DAUTH_AUTH_URL = "https://auth.delta.nitt.edu/authorize";
 
@@ -31,7 +31,7 @@ const dauthUrl = `${DAUTH_AUTH_URL}?client_id=${encodeURIComponent(
 )}&state=${state}&nonce=${nonce}`;
 
 const MYAUTH_CLIENT_ID = "eITcLYBVbNw9rYsR"; 
-const MYAUTH_REDIRECT_URI = APP_URL + "/myauthsignin";
+const MYAUTH_REDIRECT_URI = FRONTEND + "/myauthsignin";
 const myauthUrl = `http://localhost:5174/authorize?client_id=${MYAUTH_CLIENT_ID}&redirect_uri=${MYAUTH_REDIRECT_URI}`;
 
 const Signup = () => {
@@ -62,7 +62,7 @@ const Signup = () => {
     if (password !== confirmPassword) {
       setError("Password And Confirm Password do not match");
     } else {
-      fetch(API_BASE_URL + "/signup", {
+      fetch(BACKEND + "/signup", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, email, password, confirmPassword }),

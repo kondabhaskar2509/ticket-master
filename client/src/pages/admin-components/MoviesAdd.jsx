@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { API_BASE_URL } from "../../config/env";
+import { BACKEND } from "../../config/env";
 
 const movieGenres = [
   "Action",
@@ -74,7 +74,7 @@ const MoviesAdd = ({ onMovieAdded }) => {
   const handleMovieSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(API_BASE_URL + "/movies", {
+      const response = await fetch(BACKEND + "/movies", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

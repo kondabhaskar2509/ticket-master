@@ -1,2 +1,2 @@
-export const API_BASE_URL = import.meta.env.BACKEND;
-export const APP_URL = import.meta.env.FRONTENED;
+export const BACKEND = import.meta.env.VITE_BACKEND;
+export const FRONTEND = import.meta.env.VITE_FRONTEND;

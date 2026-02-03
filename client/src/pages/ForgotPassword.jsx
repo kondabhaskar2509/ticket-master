@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
-import { API_BASE_URL } from "../config/env";
+import { BACKEND } from "../config/env";
 
 const ForgotPassword = () => {
   const { email, success, setSuccess, setEmail, error, setError } =
@@ -8,7 +8,7 @@ const ForgotPassword = () => {
 
   const handleSendMail = async () => {
 
-      fetch(API_BASE_URL + "/forgot-password-usercheck", {
+      fetch(BACKEND + "/forgot-password-usercheck", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email }),
@@ -20,7 +20,7 @@ const ForgotPassword = () => {
     } else{
         setSuccess("")
         setError("Sending...");
-        fetch(API_BASE_URL + "/send-mail", {
+        fetch(BACKEND + "/send-mail", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email }),

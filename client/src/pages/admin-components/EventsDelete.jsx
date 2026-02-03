@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { API_BASE_URL } from "../../config/env";
+import { BACKEND } from "../../config/env";
 
 const EventsDelete = () => {
   const [eventdata, setEventdata] = useState([]);
 
   useEffect(() => {
-    fetch(API_BASE_URL + "/events")
+    fetch(BACKEND + "/events")
       .then((res) => res.json())
       .then((data) => setEventdata(data))
       .catch(() => setEventdata([]));
@@ -16,7 +16,7 @@ const EventsDelete = () => {
       const eventId = eventdata[index].id;
       try {
         const response = await fetch(
-          `${API_BASE_URL}/events/${eventId}`,
+          `${BACKEND}/events/${eventId}`,
           { method: "DELETE" }
         );
         if (response.ok) {

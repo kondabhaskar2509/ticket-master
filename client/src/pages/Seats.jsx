@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import { API_BASE_URL } from "../config/env";
+import { BACKEND } from "../config/env";
 
 const categories = [
   { name: "Recliner", startRow: 0, endRow: 1, price: 250 },
@@ -89,7 +89,7 @@ const Seats = () => {
         price: totalPrice,
         status: "pending",
       };
-      const response = await fetch(API_BASE_URL + "/api/bookings", {
+      const response = await fetch(BACKEND + "/api/bookings", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

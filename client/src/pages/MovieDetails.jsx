@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
-import { API_BASE_URL } from "../config/env";
+import { BACKEND } from "../config/env";
 
 const MovieDetails = () => {
   const { id } = useParams();
@@ -10,7 +10,7 @@ const MovieDetails = () => {
   const { status } = useContext(AuthContext);
 
   useEffect(() => {
-    fetch(`${API_BASE_URL}/movies/${id}`)
+    fetch(`${BACKEND}/movies/${id}`)
       .then((res) => res.json())
       .then((data) => setMovie(data))
       .catch(() => setMovie(null));

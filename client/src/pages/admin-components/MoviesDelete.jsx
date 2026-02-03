@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { API_BASE_URL } from "../../config/env";
+import { BACKEND } from "../../config/env";
 
 const MoviesDelete = () => {
   const [moviedata, setMoviedata] = useState([]);
 
   useEffect(() => {
-    fetch(API_BASE_URL + "/movies")
+    fetch(BACKEND + "/movies")
       .then((res) => res.json())
       .then((data) => setMoviedata(data))
       .catch(() => setMoviedata([]));
@@ -16,7 +16,7 @@ const MoviesDelete = () => {
       const movieId = moviedata[index].id;
       try {
         const response = await fetch(
-          `${API_BASE_URL}/movies/${movieId}`,
+          `${BACKEND}/movies/${movieId}`,
           { method: "DELETE" }
         );
         if (response.ok) {

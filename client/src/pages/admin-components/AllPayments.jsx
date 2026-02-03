@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { API_BASE_URL } from "../../config/env";
+import { BACKEND } from "../../config/env";
 
 const AllPayments = () => {
   const [allPayments, setAllPayments] = useState({});
@@ -12,7 +12,7 @@ const AllPayments = () => {
   const fetchAllPayments = async () => {
     setLoadingPayments(true);
     try {
-      const response = await fetch(API_BASE_URL + "/payments/admin/all", {
+      const response = await fetch(BACKEND + "/payments/admin/all", {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("authToken")}`,
         },

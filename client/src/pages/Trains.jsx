@@ -1,7 +1,7 @@
 import React, { useState, useContext, useEffect } from "react";
 import { AuthContext } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
-import { API_BASE_URL } from "../config/env";
+import { BACKEND } from "../config/env";
 
 const daySymbols = ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"];
 function getDaySymbol(date) {
@@ -26,7 +26,7 @@ const Trains = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch(API_BASE_URL + "/trains")
+    fetch(BACKEND + "/trains")
       .then((res) => res.json())
       .then((data) => {
         setTraindata(data);
