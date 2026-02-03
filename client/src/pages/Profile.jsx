@@ -2,7 +2,6 @@ import React, { useContext, useEffect, useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
 import defaultProfileImage from "../assets/default.jpg";
-import { BACKEND } from "../config/env";
 
 const Profile = () => {
   const {
@@ -35,7 +34,7 @@ const Profile = () => {
     }
 
     setIsLoading(true);
-    fetch(BACKEND + "/profile", {
+    fetch(process.env.BACKEND + "/profile", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email: contextEmail }),
@@ -78,7 +77,7 @@ const Profile = () => {
         if (!selectedFile) return;
         const formData = new FormData();
         formData.append("image", selectedFile);
-        const uploadRes = await fetch(BACKEND + "/upload", {
+        const uploadRes = await fetch(process.env.BACKEND + "/upload", {
           method: "POST",
           body: formData,
         });
@@ -86,7 +85,7 @@ const Profile = () => {
         if (uploadData.imageUrl) {
           setImageUrl(uploadData.imageUrl);
           setProfileImage(uploadData.imageUrl);
-          await fetch(BACKEND + "/profile-image", {
+          await fetch(process.env.BACKEND + "/profile-image", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({

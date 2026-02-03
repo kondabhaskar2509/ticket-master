@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
-import { BACKEND } from "../config/env";
 
 const MovieDetails = () => {
   const { id } = useParams();
@@ -10,7 +9,7 @@ const MovieDetails = () => {
   const { status } = useContext(AuthContext);
 
   useEffect(() => {
-    fetch(`${BACKEND}/movies/${id}`)
+    fetch(`${process.env.BACKEND}/movies/${id}`)
       .then((res) => res.json())
       .then((data) => setMovie(data))
       .catch(() => setMovie(null));

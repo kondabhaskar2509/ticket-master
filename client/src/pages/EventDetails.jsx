@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
-import { BACKEND } from "../config/env";
 
 const EventDetails = () => {
   const { id } = useParams();
@@ -10,7 +9,7 @@ const EventDetails = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch(`${BACKEND}/events/${id}`)
+    fetch(`${process.env.BACKEND}/events/${id}`)
       .then((res) => res.json())
       .then((data) => setEvent(data))
       .catch(() => setEvent(null));
@@ -71,7 +70,7 @@ const EventDetails = () => {
           date: new Date().toISOString(),
         };
 
-        const response = await fetch(BACKEND + "/bookings", {
+        const response = await fetch(process.env.BACKEND + "/bookings", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

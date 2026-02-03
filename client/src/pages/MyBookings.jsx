@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
-import { BACKEND } from "../config/env";
 
 const Bookings = () => {
   const [bookings, setBookings] = useState([]);
@@ -24,7 +23,7 @@ const Bookings = () => {
         }
 
         const response = await fetch(
-          `${BACKEND}/bookings/user/${email}`,
+          `${process.env.BACKEND}/bookings/user/${email}`,
           {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("authToken")}`,

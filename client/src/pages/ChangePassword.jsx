@@ -2,7 +2,6 @@ import React, { useState, useContext } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
-import { BACKEND } from "../config/env";
 
 const ChangePassword = () => {
   const { email, success, setSuccess, error, setError } = useContext(AuthContext);
@@ -29,7 +28,7 @@ const ChangePassword = () => {
       return;
     }
 
-    fetch(BACKEND + "/change-password", {
+    fetch(process.env.BACKEND + "/change-password", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ 

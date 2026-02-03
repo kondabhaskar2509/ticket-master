@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { BACKEND } from "../../config/env";
 
 const EventsDelete = () => {
   const [eventdata, setEventdata] = useState([]);
 
   useEffect(() => {
-    fetch(BACKEND + "/events")
+    fetch(process.env.BACKEND + "/events")
       .then((res) => res.json())
       .then((data) => setEventdata(data))
       .catch(() => setEventdata([]));
@@ -16,7 +15,7 @@ const EventsDelete = () => {
       const eventId = eventdata[index].id;
       try {
         const response = await fetch(
-          `${BACKEND}/events/${eventId}`,
+          `${process.env.BACKEND}/events/${eventId}`,
           { method: "DELETE" }
         );
         if (response.ok) {

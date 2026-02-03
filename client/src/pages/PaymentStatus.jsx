@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
-import { BACKEND } from "../config/env";
 
 const PaymentStatus = () => {
   const navigate = useNavigate();
@@ -17,7 +16,7 @@ const PaymentStatus = () => {
   useEffect(() => {
     const bookingId = localStorage.getItem("payment_booking_id");
     if (bookingId) {
-      fetch(`${BACKEND}/updatestatus/${bookingId}`, {
+      fetch(`${process.env.BACKEND}/updatestatus/${bookingId}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -44,7 +43,7 @@ const PaymentStatus = () => {
       setLoading(true);
 
       const response = await fetch(
-        `${BACKEND}/payments/booking/${bookingId}`,
+        `${process.env.BACKEND}/payments/booking/${bookingId}`,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("authToken")}`,
@@ -95,7 +94,7 @@ const PaymentStatus = () => {
 
   const sendConfirmationEmail = async (paymentData) => {
     try {
-      await fetch(BACKEND + "/send-mail", {
+      await fetch(process.env.BACKEND + "/send-mail", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

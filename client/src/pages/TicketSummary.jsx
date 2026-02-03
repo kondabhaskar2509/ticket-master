@@ -1,7 +1,6 @@
 import React, { useState, useContext, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
-import { BACKEND } from "../config/env";
 
 const TicketSummary = () => {
   const navigate = useNavigate();
@@ -17,7 +16,7 @@ const TicketSummary = () => {
       try {
         if (bookingId) {
           const response = await fetch(
-            `${BACKEND}/bookings/${bookingId}`,
+            `${process.env.BACKEND}/bookings/${bookingId}`,
             {
               headers: {
                 Authorization: `Bearer ${localStorage.getItem("authToken")}`,
@@ -67,7 +66,7 @@ const TicketSummary = () => {
     setActionLoading(true);
     try {
       const updateRes = await fetch(
-        `${BACKEND}/eventbooking/${booking_id}`,
+        `${process.env.BACKEND}/eventbooking/${booking_id}`,
         {
           method: "PUT",
           headers: {
@@ -79,7 +78,7 @@ const TicketSummary = () => {
       );
       if (!updateRes.ok) throw new Error("Failed to confirm booking");
 
-      await fetch(BACKEND + "/send-mail", {
+      await fetch(process.env.BACKEND + "/send-mail", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

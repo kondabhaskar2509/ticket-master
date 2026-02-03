@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import { useLocation } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
-import { BACKEND } from "../config/env";
 
 const Payments = () => {
   const location = useLocation();
@@ -17,7 +16,7 @@ const Payments = () => {
       const userEmail = user?.email || activeuser || "";
       const userName = user?.name || "";
       const response = await fetch(
-        `${BACKEND}/create-payment-link?totalAmount=${amount}&email=${userEmail}&username=${userName}`,
+        `${process.env.BACKEND}/create-payment-link?totalAmount=${amount}&email=${userEmail}&username=${userName}`,
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -28,7 +27,7 @@ const Payments = () => {
       if (data.link_url && data.link_id) {
         try {
           const userEmail = user?.email || activeuser || "";
-          await fetch(BACKEND + "/addpaymentdetails", {
+          await fetch(process.env.BACKEND + "/addpaymentdetails", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({

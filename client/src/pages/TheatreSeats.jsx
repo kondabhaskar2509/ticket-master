@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
-import { BACKEND } from "../config/env";
 
 const categories = [
   { name: "Recliner", startRow: 0, endRow: 1, price: 250 },
@@ -110,7 +109,7 @@ const TheatreSeats = () => {
         link_id: null,
       };
 
-      const response = await fetch(BACKEND + "/bookings", {
+      const response = await fetch(process.env.BACKEND + "/bookings", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

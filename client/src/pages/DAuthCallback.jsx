@@ -1,7 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
-import { BACKEND } from "../config/env";
 
 const DAuthCallback = () => {
   const { setError, setSuccess, setStatus, setUser, setActiveuser, setToken } =
@@ -17,7 +16,7 @@ const DAuthCallback = () => {
     if (code) {
       setError("");
       setSuccess("");
-      fetch(BACKEND + "/signin", {
+      fetch(process.env.BACKEND + "/signin", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ code, state }),

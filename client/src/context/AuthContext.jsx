@@ -1,5 +1,4 @@
 import React, { createContext, useState,   useEffect } from "react";
-import { BACKEND } from "../config/env";
 export const AuthContext = createContext();
 
 const AuthProvider = (props) => {
@@ -26,7 +25,7 @@ const AuthProvider = (props) => {
     const verifyToken = async () => {
       if (token) {
         try {
-          const response = await fetch(BACKEND + "/verify-token", {
+          const response = await fetch(process.env.BACKEND + "/verify-token", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",

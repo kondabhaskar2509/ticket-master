@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { BACKEND } from "../config/env";
 
 const concerts = [
   "Festember Concerts",
@@ -20,7 +19,7 @@ const Events = () => {
   const [eventdata, setEventdata] = useState([]);
 
   useEffect(() => {
-    fetch(BACKEND + "/events")
+    fetch(process.env.BACKEND + "/events")
       .then((res) => res.json())
       .then((data) => setEventdata(data))
       .catch(() => setEventdata([]));

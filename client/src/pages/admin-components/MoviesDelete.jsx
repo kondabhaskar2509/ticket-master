@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { BACKEND } from "../../config/env";
 
 const MoviesDelete = () => {
   const [moviedata, setMoviedata] = useState([]);
 
   useEffect(() => {
-    fetch(BACKEND + "/movies")
+    fetch(process.env.BACKEND + "/movies")
       .then((res) => res.json())
       .then((data) => setMoviedata(data))
       .catch(() => setMoviedata([]));
@@ -16,7 +15,7 @@ const MoviesDelete = () => {
       const movieId = moviedata[index].id;
       try {
         const response = await fetch(
-          `${BACKEND}/movies/${movieId}`,
+          `${process.env.BACKEND}/movies/${movieId}`,
           { method: "DELETE" }
         );
         if (response.ok) {
