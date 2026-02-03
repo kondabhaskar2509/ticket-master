@@ -12,6 +12,7 @@ import setupCashfree from "./api/cashfree.js";
 import setupMail from "./api/sendMail.js";
 import setupCloudinary from "./api/cloudinary.js";
 
+dotenv.config();
 
 const app = express();
 const MongoClient = mongodb.MongoClient;

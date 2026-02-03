@@ -3,8 +3,8 @@ import multer from "multer";
 import { v2 as cloudinary } from "cloudinary";
 import path from "path";
 import { fileURLToPath } from "url";
-import pkg from "multer-storage-cloudinary";
-const { CloudinaryStorage } = pkg;
+import cloudinaryStorage from "multer-storage-cloudinary";
+
 
 
 function setupCloudinary(app) {
@@ -15,7 +15,7 @@ cloudinary.config({
   api_secret: process.env.API_SECRET,
 });
 
-const storage = new CloudinaryStorage({
+const storage = cloudinaryStorage({
   cloudinary,
   params: {
     folder: "uploads",
