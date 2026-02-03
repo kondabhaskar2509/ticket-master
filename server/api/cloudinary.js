@@ -1,9 +1,11 @@
 import express from "express"
 import multer from "multer";
 import { v2 as cloudinary } from "cloudinary";
-import { CloudinaryStorage } from "multer-storage-cloudinary";
 import path from "path";
 import { fileURLToPath } from "url";
+import multerStorageCloudinary from "multer-storage-cloudinary";
+const { CloudinaryStorage } = multerStorageCloudinary;
+
 
 function setupCloudinary(app) {
 
