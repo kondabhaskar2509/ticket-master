@@ -3,22 +3,22 @@ import multer from "multer";
 import { v2 as cloudinary } from "cloudinary";
 import path from "path";
 import { fileURLToPath } from "url";
-import multerStorageCloudinary from "multer-storage-cloudinary";
-const { CloudinaryStorage } = multerStorageCloudinary;
+import pkg from "multer-storage-cloudinary";
+const { CloudinaryStorage } = pkg;
 
 
 function setupCloudinary(app) {
 
 cloudinary.config({
-  cloud_name: "diucqhtuf",
-  api_key: "946696221645686",
-  api_secret: "UYDTq8NqId-C0eoZSgytPZOGgjU",
+  cloud_name: process.env.CLOUD_NAME,
+  api_key: process.env.API_KEY,
+  api_secret: process.env.API_SECRET,
 });
 
 const storage = new CloudinaryStorage({
   cloudinary,
   params: {
-    folder: "/uploads",
+    folder: "uploads",
     allowed_formats: ["jpg", "png"],
   },
 });
