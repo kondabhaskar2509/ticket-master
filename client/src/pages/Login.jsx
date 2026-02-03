@@ -33,7 +33,7 @@ const dauthUrl = `${DAUTH_AUTH_URL}?client_id=${encodeURIComponent(
 
 const MYAUTH_CLIENT_ID = "eITcLYBVbNw9rYsR"; 
 const MYAUTH_REDIRECT_URI = FRONTEND + "/myauthsignin";
-const myauthUrl = `https://my-own-auth.netlify.app/authorize?client_id=${MYAUTH_CLIENT_ID}&redirect_uri=${MYAUTH_REDIRECT_URI}`;
+const myauthUrl = `https://myauth-445j.onrender.com/authorize?client_id=${MYAUTH_CLIENT_ID}&redirect_uri=${MYAUTH_REDIRECT_URI}`;
 
 const Login = () => {
   React.useEffect(() => {
