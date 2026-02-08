@@ -32,7 +32,7 @@ MongoClient.connect(url, {
     process.exit(1);
   })
   .then(async (client) => {
-    const authcollection = client.db("booking").collection("auth");
+    const authcollection = client.db("booking").collection("ticketmasterusers");
     const ticketcollection = client.db("booking").collection("ticket");
     const moviecollection = client.db("booking").collection("moviedata");
     const eventcollection = client.db("booking").collection("eventdata");
