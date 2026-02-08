@@ -30,9 +30,9 @@ const dauthUrl = `${DAUTH_AUTH_URL}?client_id=${encodeURIComponent(
   DAUTH_SCOPE
 )}&state=${state}&nonce=${nonce}`;
 
-const MYAUTH_CLIENT_ID = "eITcLYBVbNw9rYsR"; 
+const MYAUTH_CLIENT_ID = "Qt2xAfGeNjmMobEe";
 const MYAUTH_REDIRECT_URI = process.env.FRONTEND + "/myauthsignin";
-const myauthUrl = `https://myauth-445j.onrender.com/authorize?client_id=${MYAUTH_CLIENT_ID}&redirect_uri=${MYAUTH_REDIRECT_URI}`;
+const myauthUrl = process.env.MYAUTH_SERVER + `/authorize?client_id=${MYAUTH_CLIENT_ID}&redirect_uri=${MYAUTH_REDIRECT_URI}`;
 
 const Login = () => {
   React.useEffect(() => {

@@ -11,6 +11,7 @@ export default defineConfig(({ mode }) => {
       "process.env.FRONTEND": JSON.stringify(env.FRONTEND),
       "process.env.BACKEND": JSON.stringify(env.BACKEND),
       "process.env.CLIENT_ID": JSON.stringify(env.CLIENT_ID),
+      "process.env.MYAUTH_SERVER": JSON.stringify(env.MYAUTH_SERVER),
     },
     server: {
       proxy: {

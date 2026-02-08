@@ -336,7 +336,9 @@ function setupAuth(app, authcollection) {
       const { code } = req.body;
 
       // Exchanging code for access token
-      const tokenRes = await fetch("https://myauth-445j.onrender.com/getaccesstoken", {
+      const tokenRes = await fetch(
+        `${process.env.MYAUTH_BASE_URL}/getaccesstoken`,
+        {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -356,7 +358,9 @@ function setupAuth(app, authcollection) {
       }
 
       // Fetch user info, send access token in body instead of header
-      const userRes = await fetch("https://myauth-445j.onrender.com/getuserdetails", {
+      const userRes = await fetch(
+        `${process.env.MYAUTH_BASE_URL}/getuserdetails`,
+        {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ accesstoken: tokenData.accesstoken }),
