@@ -31,7 +31,7 @@ const dauthUrl = `${DAUTH_AUTH_URL}?client_id=${encodeURIComponent(
 )}&state=${state}&nonce=${nonce}`;
 
 const MYAUTH_CLIENT_ID = "gT5wdhLxMsluJ8cP";
-const MYAUTH_REDIRECT_URI = process.env.FRONTEND + "/myauthsignin";
+const MYAUTH_REDIRECT_URI = `${process.env.FRONTEND}/myauthsignin`;
 const myauthUrl = process.env.MYAUTH_SERVER + `/authorize?client_id=${MYAUTH_CLIENT_ID}&redirect_uri=${MYAUTH_REDIRECT_URI}`;
 
 const Login = () => {
