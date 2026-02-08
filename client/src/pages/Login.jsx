@@ -3,11 +3,6 @@ import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
-const DAUTH_CLIENT_ID = "8c6Bna.YrZM1M8GC";
-const DAUTH_REDIRECT_URI = process.env.FRONTEND + "/signin";
-const DAUTH_SCOPE = "email openid profile user";
-const DAUTH_AUTH_URL = "https://auth.delta.nitt.edu/authorize";
-
 
 function generateRandomString(length = 16) {
   const chars =
@@ -22,6 +17,11 @@ function generateRandomString(length = 16) {
 const state = generateRandomString(12);
 const nonce = generateRandomString(12);
 
+const DAUTH_CLIENT_ID = process.env.CLIENT_ID;
+const DAUTH_REDIRECT_URI = `${process.env.FRONTEND}/signin`;
+const DAUTH_SCOPE = "email openid profile user";
+const DAUTH_AUTH_URL = "https://auth.delta.nitt.edu/authorize";
+
 const dauthUrl = `${DAUTH_AUTH_URL}?client_id=${encodeURIComponent(
   DAUTH_CLIENT_ID
 )}&redirect_uri=${encodeURIComponent(
@@ -32,7 +32,7 @@ const dauthUrl = `${DAUTH_AUTH_URL}?client_id=${encodeURIComponent(
 
 const MYAUTH_CLIENT_ID = "gT5wdhLxMsluJ8cP";
 const MYAUTH_REDIRECT_URI = `${process.env.FRONTEND}/myauthsignin`;
-const myauthUrl = process.env.MYAUTH_SERVER + `/authorize?client_id=${MYAUTH_CLIENT_ID}&redirect_uri=${MYAUTH_REDIRECT_URI}`;
+const myauthUrl = `${process.env.MYAUTH_SERVER}/authorize?client_id=${MYAUTH_CLIENT_ID}&redirect_uri=${MYAUTH_REDIRECT_URI}`;
 
 const Login = () => {
   React.useEffect(() => {
