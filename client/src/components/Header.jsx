@@ -38,12 +38,7 @@ const Header = ({onClick}) => {
               className="text-white rounded-2xl hover:bg-[#86cfff90] p-2 pt-1 cursor-pointer">
               Login
             </p>
-            <p
-              hidden={status == "success"}
-              onClick={() => navigate("/signup")}
-              className="text-white rounded-2xl hover:bg-[#86cfff90] p-2 pt-1 cursor-pointer">
-              Signup
-            </p>
+            
             <p
               hidden={status != "success"}
               onClick={() => {

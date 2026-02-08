@@ -159,21 +159,22 @@ const Login = () => {
           <div className="flex-grow border-t border-gray-300"></div>
         </div>
 
-        <button
-          className="w-full bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 rounded-md text-lg transition"
-          onClick={() => {
-            window.location.href = dauthUrl;
-          }}>
-          Signin with DAuth
-        </button>
-
-        <button
-          className="w-full bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 rounded-md text-lg transition"
-          onClick={() => {
-            window.location.href = myauthUrl;
-          }}>
-          Signin with My Auth
-        </button>
+        <div className="flex justify-between">
+          <button
+            className="w-full bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 m-1 rounded-md text-lg transition"
+            onClick={() => {
+              window.location.href = dauthUrl;
+            }}>
+            Signin with DAuth
+          </button>
+          <button
+            className="w-full bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 m-1 rounded-md text-lg transition"
+            onClick={() => {
+              window.location.href = myauthUrl;
+            }}>
+            Signin with MyAuth
+          </button>
+        </div>
 
         <button
           type="button"
