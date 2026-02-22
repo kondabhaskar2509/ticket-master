@@ -17,7 +17,7 @@ const Admin = () => {
           onClick={() =>
             setActiveComponent(activeComponent === "addMovie" ? "" : "addMovie")
           }
-          className="px-6 py-3 bg-blue-600 rounded-lg hover:bg-blue-700 transition">
+          className="px-6 py-3 bg-blue-600 rounded-lg hover:bg-blue-900 transition">
           Add Movie
         </button>
         <button
@@ -26,14 +26,14 @@ const Admin = () => {
               activeComponent === "deleteMovie" ? "" : "deleteMovie"
             )
           }
-          className="px-6 py-3 bg-red-600 rounded-lg hover:bg-red-700 transition">
+          className="px-6 py-3 bg-red-600 rounded-lg hover:bg-red-900 transition">
           Delete Movies
         </button>
         <button
           onClick={() =>
             setActiveComponent(activeComponent === "addEvent" ? "" : "addEvent")
           }
-          className="px-6 py-3 bg-green-600 rounded-lg hover:bg-green-700 transition">
+          className="px-6 py-3 bg-green-600 rounded-lg hover:bg-green-900 transition">
           Add Event
         </button>
         <button
@@ -42,7 +42,7 @@ const Admin = () => {
               activeComponent === "deleteEvent" ? "" : "deleteEvent"
             )
           }
-          className="px-6 py-3 bg-red-600 rounded-lg hover:bg-red-700 transition">
+          className="px-6 py-3 bg-red-600 rounded-lg hover:bg-red-900 transition">
           Delete Events
         </button>
         <button
@@ -51,7 +51,7 @@ const Admin = () => {
               activeComponent === "allBookings" ? "" : "allBookings"
             )
           }
-          className="px-6 py-3 bg-purple-600 rounded-lg hover:bg-purple-700 transition">
+          className="px-6 py-3 bg-purple-600 rounded-lg hover:bg-purple-900 transition">
           All Bookings
         </button>
         <button
@@ -60,7 +60,7 @@ const Admin = () => {
               activeComponent === "allPayments" ? "" : "allPayments"
             )
           }
-          className="px-6 py-3 bg-yellow-600 rounded-lg hover:bg-yellow-700 transition">
+          className="px-6 py-3 bg-yellow-600 rounded-lg hover:bg-yellow-900 transition">
           All Payments
         </button>
       </div>

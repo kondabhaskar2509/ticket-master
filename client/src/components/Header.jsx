@@ -15,7 +15,7 @@ const Header = ({onClick}) => {
           <div className="flex items-center">
             <button
               onClick={onClick}
-              className="mr-4 focus:outline-none group">
+              className="mr-4 focus:outline-none group p-2 hover:bg-blue-200 hover:cursor-pointer rounded">
               <span className="block w-8 h-1 bg-[#36a3eb] mb-1 rounded group-hover:bg-blue-400 transition"></span>
               <span className="block w-8 h-1 bg-[#36a3eb] mb-1 rounded group-hover:bg-blue-400 transition"></span>
               <span className="block w-8 h-1 bg-[#36a3eb] rounded group-hover:bg-blue-400 transition"></span>

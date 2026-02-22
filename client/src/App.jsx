@@ -27,6 +27,7 @@ import TrainTicket from "./pages/TrainTicket";
 import PaymentStatus from "./pages/PaymentStatus";
 import Sidebar from "./components/Sidebar";
 import MyAuthCallback from "./pages/MyAuthCallback";
+import Newfile from "./pages/Newfile";
 
 const App = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -36,7 +37,7 @@ const App = () => {
         <Header onClick={() => setSidebarOpen(!sidebarOpen)} />
         <div className="flex">
           {sidebarOpen && <Sidebar />}
-          <div className={sidebarOpen ? "w-[85vw]" : "w-full"}>
+          <div className={sidebarOpen ? "ml-[15vw] w-[85vw]" : "w-full"}>
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/movie/:id" element={<MovieDetails />} />
@@ -59,10 +60,8 @@ const App = () => {
               <Route path="/reset-password" element={<ResetPassword />} />
               <Route path="/change-password" element={<ChangePassword />} />
               <Route path="/admin" element={<Admin />} />
-              <Route
-                path="/transaction-history"
-                element={<TransactionHistory />}
-              />
+              <Route path="/newfile" element={<Newfile />} />
+              <Route path="/transaction-history" element={<TransactionHistory />} />
               <Route path="/payments" element={<Payments />} />
               <Route path="/payment-status" element={<PaymentStatus />} />
             </Routes>

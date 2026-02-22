@@ -9,7 +9,7 @@ const Sidebar = () => {
   return (
     <>
       <div
-        className={'left-0 top-[10vh] h-auto w-[15vw] bg-[#10182b]  border-r border-amber-400 shadow-lg'}>
+        className={'fixed top-[10vh] h-[90vh] w-[15vw] bg-[#10182b]  border-r border-white-400 shadow-lg'}>
 
         <div className="flex flex-col  py-2 ">
           <div className="px-4 py-2 pt-6 ">

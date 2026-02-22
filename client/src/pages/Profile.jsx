@@ -4,31 +4,26 @@ import { AuthContext } from "../context/AuthContext";
 import defaultProfileImage from "../assets/default.jpg";
 
 const Profile = () => {
-  const {
-    user: authUser,
-    loading: authLoading,
-    email: contextEmail,
-    setUser: setAuthUser,
-  } = useContext(AuthContext);
+  const {user,loading,email,setUser} = useContext(AuthContext);
 
-  const [user, setUser] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [tempImage, setTempImage] = useState(null); 
   const [selectedFile, setSelectedFile] = useState(null); 
   const [profileImage, setProfileImage] = useState(null); 
-  const [imageUrl, setImageUrl] = useState(null);
   const [isEditing, setIsEditing] = useState(false);
   const navigate = useNavigate();
   const fileInputRef = useRef(null);
 
+
+
   useEffect(() => {
-    if (authLoading) {
+    if (loading) {
       return;
     }
 
-    if (authUser) {
-      setUser(authUser);
+    if (user) {
+      if (user.profileImage != null) setProfileImage(user.profileImage);
+      else setProfileImage(defaultProfileImage);
       setIsLoading(false);
       return;
     }
@@ -37,14 +32,15 @@ const Profile = () => {
     fetch(process.env.BACKEND + "/profile", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email: contextEmail }),
+      body: JSON.stringify({ email: email }),
     })
       .then((res) => res.json())
       .then((data) => {
         if (data.status === "success") {
           setUser(data.user);
-          if (data.user.profileImage != null)
-            setProfileImage(data.user.profileImage);
+          localStorage.setItem("user", JSON.stringify(data.user));
+          if (data.user.profileImage != null) setProfileImage(data.user.profileImage);
+          else setProfileImage(defaultProfileImage)
         } else {
           setError("Failed to load profile data");
         }
@@ -55,7 +51,7 @@ const Profile = () => {
         setError("An error occurred while loading profile data");
         setIsLoading(false);
       });
-  }, [authUser, authLoading, contextEmail]);
+  }, [user, loading, email]);
 
   const handleImageChange = (e) => {
     const file = e.target.files[0];
@@ -63,7 +59,6 @@ const Profile = () => {
       setSelectedFile(file);
       const reader = new FileReader();
       reader.onloadend = () => {
-        setTempImage(reader.result);
         setProfileImage(reader.result); 
         setIsEditing(true);
       };
@@ -72,6 +67,7 @@ const Profile = () => {
   };
 
   const saveProfileImage = () => {
+    
     const uploadAndSave = async () => {
       try {
         if (!selectedFile) return;
@@ -83,33 +79,30 @@ const Profile = () => {
         });
         const uploadData = await uploadRes.json();
         if (uploadData.imageUrl) {
-          setImageUrl(uploadData.imageUrl);
           setProfileImage(uploadData.imageUrl);
           await fetch(process.env.BACKEND + "/profile-image", {
             method: "POST",
-            headers: { "Content-Type": "application/json" },
+            headers: { 
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${localStorage.getItem("authToken")}`,
+            },
             body: JSON.stringify({
               email: user.email,
               imageUrl: uploadData.imageUrl,
             }),
           });
+          const updatedUser = { ...user, profileImage: uploadData.imageUrl };
+          setUser(updatedUser);
+          localStorage.setItem("user", JSON.stringify(updatedUser));
         }
         setIsEditing(false);
-        setTempImage(null);
         setSelectedFile(null);
       } catch (err) {
         console.error("Error uploading/saving profile image:", err);
       }
     };
+
     uploadAndSave();
-  };
-
-  const deleteProfileImage = () => {
-    setProfileImage(defaultProfileImage);
-  };
-
-  const triggerFileInput = () => {
-    fileInputRef.current.click();
   };
 
   return (
@@ -146,7 +139,7 @@ const Profile = () => {
                 <div className="flex space-x-2">
                   {!isEditing ? (
                     <button
-                      onClick={triggerFileInput}
+                      onClick={()=>fileInputRef.current.click()}
                       className="bg-[#36a3eb] text-white px-4 py-2 rounded-md hover:bg-blue-600 transition">
                       Edit
                     </button>
@@ -158,7 +151,7 @@ const Profile = () => {
                     </button>
                   )}
                   <button
-                    onClick={deleteProfileImage}
+                    onClick={()=>setProfileImage(defaultProfileImage)}
                     className="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600 transition">
                     Delete
                   </button>
