@@ -1,4 +1,4 @@
-import  { createContext, useState,   useEffect } from "react";
+import { createContext, useState, useEffect } from "react";
 export const AuthContext = createContext();
 
 const AuthProvider = (props) => {
@@ -24,41 +24,41 @@ const AuthProvider = (props) => {
   useEffect(() => {
     const verifyToken = async () => {
       if (token) {
-        try {
-          const response = await fetch(process.env.BACKEND + "/verify-token", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-              Authorization: `Bearer ${token}`,
-            },
-          });
-          const data = await response.json();
-          if (data.status === "success") {
-            setUser(data.user);
-            setEmail(data.user.email);
-            setName(data.user.name);
-            setActiveuser(data.user.email);
-            localStorage.setItem("user", JSON.stringify(data.user));
-            setStatus("success");
-          } else {
-                        
-            localStorage.removeItem("authToken");
-            localStorage.removeItem("activeUser");
-            localStorage.removeItem("user");
-            setStatus("idle");
-            setActiveuser("");
-            setUser(null);
-            setToken("");
+          try {
+            const response = await fetch(process.env.BACKEND + "/verify-token", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+                Authorization: `Bearer ${token}`,
+              },
+            });
+            const data = await response.json();
+            if (data.status === "success") {
+              setUser(data.user);
+              setEmail(data.user.email);
+              setName(data.user.name);
+              setActiveuser(data.user.email);
+              localStorage.setItem("user", JSON.stringify(data.user));
+              setStatus("success");
+            } else {
+              localStorage.removeItem("authToken");
+              localStorage.removeItem("activeUser");
+              localStorage.removeItem("user");
+              setStatus("idle");
+              setActiveuser("");
+              setUser(null);
+              setToken("");
+            }
+          } catch (err) {
+            const storedUser = localStorage.getItem("user");
+            if (token && storedUser) {
+              setUser(JSON.parse(storedUser));
+              setActiveuser(JSON.parse(storedUser).email);
+              setStatus("success");
+            }
           }
-        } catch (err) {
-          const storedUser = localStorage.getItem("user");
-          if (token && storedUser) {
-            setUser(JSON.parse(storedUser));
-            setActiveuser(JSON.parse(storedUser).email);
-            setStatus("success");
-          }
-        }
-      } else {
+      } 
+      else {
         setStatus("idle");
         setActiveuser("");
         setUser(null);

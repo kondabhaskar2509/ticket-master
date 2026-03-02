@@ -1,6 +1,6 @@
 import jwt from "jsonwebtoken";
 
-const JWT_SECRET = process.env.JWT_SECRET || "your-secret-key";
+const jwtsecret = process.env.JWT_SECRET;
 
 export const verifyJWT = (req, res, next) => {
   try {
@@ -16,7 +16,7 @@ export const verifyJWT = (req, res, next) => {
       return res.status(401).json({ error: "Invalid token format" });
     }
 
-    jwt.verify(token, JWT_SECRET, (err, decoded) => {
+    jwt.verify(token, jwtsecret, (err, decoded) => {
       if (err) {
         return res.status(401).json({ error: "Invalid or expired token" });
       }

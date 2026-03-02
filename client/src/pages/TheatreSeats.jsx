@@ -1,57 +1,59 @@
 import React, { useState, useEffect, useContext } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
-
-const categories = [
-  { name: "Recliner", startRow: 0, endRow: 1, price: 250 },
-  { name: "Balcony", startRow: 3, endRow: 8, price: 180 },
-  { name: "Lower Class", startRow: 10, endRow: 15, price: 130 },
-];
-
-const getSeatCategory = (row) => {
-  for (const category of categories) {
-    if (row >= category.startRow && row <= category.endRow) {
-      return category.name;
-    }
-  }
-  return null;
-};
-
-const rows = 16;
-const cols = 12;
-const rowLabels = Array.from({ length: rows }, (_, i) => String.fromCharCode(65 + i));
-const colLabels = Array.from({ length: cols }, (_, i) => (i + 1).toString());
-
-const seatBoxClass =
-  "w-10 h-10 sm:w-8 sm:h-8  rounded shadow text-base font-bold flex items-center justify-center";
+import io from "socket.io-client";
 
 const TheatreSeats = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const { movieDetails, selectedTheatre, selectedSlot, bookingType } =
-    location.state || {};
+  const {
+    movieDetails,
+    selectedTheatre,
+    selectedSlot,
+    bookingType,
+    selectedDate,
+  } = location.state || {};
   const { activeuser } = useContext(AuthContext);
-
-  const [seatStatus, setSeatStatus] = useState(() => {
-    const status = {};
-    for (let r = 0; r < rows; r++) {
-      for (let c = 0; c < cols; c++) {
-        const seatKey = `${r}-${c}`;
-        if (getSeatCategory(r)) {
-          status[seatKey] = Math.random() < 0.2 ? "booked" : "available";
-        }
-      }
-    }
-    return status;
-  });
-
+  const [seatStatus, setSeatStatus] = useState("available");
   const [selectedSeats, setSelectedSeats] = useState([]);
+  const [socket,setSocket]=useState("")
   const [selectedCategories, setSelectedCategories] = useState({
     Recliner: 0,
     Balcony: 0,
     "Lower Class": 0,
   });
   const [totalPrice, setTotalPrice] = useState(0);
+  const categories = [
+    { name: "Recliner", startRow: 0, endRow: 2, price: 250 },
+    { name: "Balcony", startRow: 3, endRow: 11, price: 180 },
+    { name: "Lower Class", startRow: 12, endRow: 14, price: 130 },
+  ];
+  const rows = 15;
+  const cols = 12;
+
+  useEffect(() => {
+    const newsocket = io.connect(process.env.BACKEND);
+    setSocket(newsocket);
+
+    socket.on("recieve_message", (data) => {
+      alert(data.message);
+    });
+
+    return ()=>{newsocket.disconnect()}
+  }, [socket]);
+
+   const socketuse = () => {
+    socket.emit("send_message", { message: "hello" });
+  };
+
+  const getSeatCategory = (row) => {
+    for (const category of categories) {
+      if (row >= category.startRow && row <= category.endRow) {
+        return category.name;
+      }
+    }
+    return null;
+  };
 
   useEffect(() => {
     const newSelectedCategories = { Recliner: 0, Balcony: 0, "Lower Class": 0 };
@@ -87,7 +89,7 @@ const TheatreSeats = () => {
         throw new Error("User email not found. Please login again.");
       }
 
-      // Converting seats to alpha-numeric form 
+      // Converting seats to alpha-numeric form
       const getAlphaSeat = (seatKey) => {
         const [row, col] = seatKey.split("-").map(Number);
         return String.fromCharCode(65 + row) + (col + 1);
@@ -95,12 +97,12 @@ const TheatreSeats = () => {
 
       const bookingData = {
         email: userEmail,
-        type: bookingType || "movie",
+        type: bookingType,
         details: {
           title: movieDetails.title,
           theatre: selectedTheatre.name,
           slot: selectedSlot,
-          selectedDate: location.state?.selectedDate,
+          selectedDate: selectedDate,
           selectedSeats: selectedSeats.map(getAlphaSeat),
           duration: movieDetails.duration,
         },
@@ -108,6 +110,8 @@ const TheatreSeats = () => {
         bookingStatus: null,
         link_id: null,
       };
+
+      console.log(bookingData);
 
       const response = await fetch(process.env.BACKEND + "/bookings", {
         method: "POST",
@@ -135,6 +139,7 @@ const TheatreSeats = () => {
   };
 
   const toggleSeat = (seatKey) => {
+    socketuse();
     if (seatStatus[seatKey] === "booked") return;
     if (selectedSeats.includes(seatKey)) {
       setSelectedSeats(selectedSeats.filter((s) => s !== seatKey));
@@ -144,6 +149,86 @@ const TheatreSeats = () => {
       setSeatStatus((prev) => ({ ...prev, [seatKey]: "selected" }));
     }
   };
+
+  const rowLabels = Array.from({ length: rows }, (_, i) =>
+    String.fromCharCode(65 + i)
+  );
+  const colLabels = Array.from({ length: cols }, (_, i) => (i + 1).toString());
+  const seatBoxClass =
+    "w-10 h-10 p-5 sm:w-8 sm:h-8  rounded shadow text-base font-bold flex items-center justify-center";
+
+  const renderSeatGrid = () => (
+    <div className="w-full flex flex-col items-center px-8 md:px-32 lg:px-56">
+      <div className="w-full flex justify-center my-2  mb-6">
+        <div className="h-12 bg-gray-300 w-3/5 text-black font-bold text-2xl flex items-center justify-center rounded-md shadow-md mb-6">
+          Screen
+        </div>
+      </div>
+
+      <div
+        style={{
+          display: "grid",
+          gridAutoColumns: "auto",
+          gridAutoRows: "auto",
+          gap: "8px",
+          alignItems: "center",
+          justifyItems: "center",
+          marginBottom: "20px",
+        }}>
+        {colLabels.map((colLabel, c) => (
+          <div
+            key={`col-header-${c}`}
+            style={{ gridColumn: c + 2, gridRow: 1 }}
+            className="font-bold text-center text-sm">
+            {colLabel}
+          </div>
+        ))}
+
+        {/* Row Labels and Seats */}
+        {rowLabels.map((rowLabel, r) =>
+          getSeatCategory(r) ? (
+            <React.Fragment key={rowLabel}>
+              <div
+                style={{ gridColumn: 1, gridRow: r + 2 }}
+                className="font-bold text-center">
+                {rowLabel}
+              </div>
+
+              {/* Seats */}
+              {colLabels.map((colLabel, c) => {
+                const seatKey = `${r}-${c}`;
+                const status = seatStatus[seatKey];
+                let seatColor =
+                  status === "booked"
+                    ? "bg-red-800 text-white"
+                    : status === "selected"
+                    ? "bg-blue-900 text-white"
+                    : "bg-gray-200 text-black";
+                return (
+                  <button
+                    key={seatKey}
+                    className={`${seatBoxClass} ${seatColor} ${
+                      status === "booked"
+                        ? "cursor-not-allowed"
+                        : "hover:bg-blue-300"
+                    }`}
+                    style={{
+                      gridColumn: c + 2,
+                      gridRow: r + 2,
+                    }}
+                    disabled={status === "booked"}
+                    onClick={() => toggleSeat(seatKey)}>
+                    {rowLabel}
+                    {colLabel}
+                  </button>
+                );
+              })}
+            </React.Fragment>
+          ) : null
+        )}
+      </div>
+    </div>
+  );
 
   const renderLegend = () => (
     <div className="flex justify-center my-5 gap-4">
@@ -172,59 +257,12 @@ const TheatreSeats = () => {
     </div>
   );
 
-  const renderSeatGrid = () => (
-    <div className="w-full flex flex-col items-center px-8 md:px-32 lg:px-56">
-
-      <div className="w-full flex justify-center my-2  mb-6">
-        <div className="h-12 bg-gray-300 w-3/5 text-black font-bold text-2xl flex items-center justify-center rounded-md shadow-md mb-6">
-          Screen
-        </div>
-      </div>
-
-      {rowLabels.map((rowLabel, r) =>
-        getSeatCategory(r) ? (
-          <div key={rowLabel} className="flex items-center mb-1">
-            
-            <div className="flex gap-5">
-              {colLabels.map((colLabel, c) => {
-                const seatKey = `${r}-${c}`;
-                const status = seatStatus[seatKey];
-                let seatColor =
-                  status === "booked"
-                    ? "bg-red-800 text-white"
-                    : status === "selected"
-                    ? "bg-blue-900 text-white"
-                    : "bg-gray-200 text-black";
-                return (
-                  <button
-                    key={seatKey}
-                    className={`${seatBoxClass} ${seatColor} ${
-                      status === "booked"
-                        ? "cursor-not-allowed"
-                        : "hover:bg-blue-300"
-                    }`}
-                    disabled={status === "booked"}
-                    onClick={() => toggleSeat(seatKey)}>
-                    {rowLabel}
-                    {colLabel}
-                  </button>
-                );
-              })}
-            </div>
-          </div>
-        ) : null
-      )}
-    </div>
-  );
-
   return (
     <div className="max-w-4xl mx-auto my-8 p-5 bg-white text-black rounded-lg">
       <h2 className="text-center mb-5 text-2xl font-bold">Select Your Seats</h2>
       {renderSeatGrid()}
       {renderLegend()}
-      <div className="border-t border-b border-dashed border-gray-300 py-4 my-5">
-        {renderCategoryInfo()}
-      </div>
+      {renderCategoryInfo()}
       <div className="flex justify-between items-center bg-white p-4 rounded-lg shadow-lg">
         <div>
           <h3 className="mb-2 text-lg font-bold">Selected Seats Summary</h3>
