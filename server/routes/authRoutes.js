@@ -3,7 +3,6 @@ import { verifyJWT } from "../middleware.js";
 import * as authController from "../controllers/authController.js";
 
 export const setupAuthRoutes = (router, authCollection) => {
-  // Public routes
   router.post("/signup", (req, res) =>
     authController.signupController(req, res, authCollection)
   );
