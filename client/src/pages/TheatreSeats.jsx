@@ -16,7 +16,7 @@ const TheatreSeats = () => {
   const { activeuser } = useContext(AuthContext);
   const [seatStatus, setSeatStatus] = useState("available");
   const [selectedSeats, setSelectedSeats] = useState([]);
-  const [socket,setSocket]=useState("")
+  const [socket, setSocket] = useState(null);
   const [selectedCategories, setSelectedCategories] = useState({
     Recliner: 0,
     Balcony: 0,
@@ -32,18 +32,23 @@ const TheatreSeats = () => {
   const cols = 12;
 
   useEffect(() => {
-    const newsocket = io.connect(process.env.BACKEND);
+    const backendUrl = process.env.BACKEND || "http://localhost:5000";
+    const newsocket = io.connect(backendUrl);
     setSocket(newsocket);
 
-    socket.on("recieve_message", (data) => {
+    newsocket.on("recieve_message", (data) => {
       alert(data.message);
     });
 
-    return ()=>{newsocket.disconnect()}
-  }, [socket]);
+    return () => {
+      newsocket.disconnect();
+    };
+  }, []);
 
-   const socketuse = () => {
-    socket.emit("send_message", { message: "hello" });
+  const socketuse = () => {
+    if (socket && typeof socket.emit === "function") {
+      socket.emit("send_message", { message: "hello" });
+    }
   };
 
   const getSeatCategory = (row) => {

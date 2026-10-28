@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useRef } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
 
@@ -7,13 +7,15 @@ const DAuthCallback = () => {
     useContext(AuthContext);
   const navigate = useNavigate();
   const location = useLocation();
+  const hasFetched = useRef(false);
 
   useEffect(() => {
     const queryParams = new URLSearchParams(location.search);
     const code = queryParams.get("code");
     const state = queryParams.get("state");
     
-    if (code) {
+    if (code && !hasFetched.current) {
+      hasFetched.current = true;
       setError("");
       setSuccess("");
       fetch(process.env.BACKEND + "/signin", {
