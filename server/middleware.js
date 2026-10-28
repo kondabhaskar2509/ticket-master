@@ -1,7 +1,5 @@
 import jwt from "jsonwebtoken";
 
-const jwtsecret = process.env.JWT_SECRET;
-
 export const verifyJWT = (req, res, next) => {
   try {
     const authHeader = req.headers["authorization"];
@@ -15,6 +13,8 @@ export const verifyJWT = (req, res, next) => {
     if (!token) {
       return res.status(401).json({ error: "Invalid token format" });
     }
+
+    const jwtsecret = process.env.JWT_SECRET || "your-secret-key";
 
     jwt.verify(token, jwtsecret, (err, decoded) => {
       if (err) {

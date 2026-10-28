@@ -127,6 +127,12 @@ const TheatreSeats = () => {
         body: JSON.stringify(bookingData),
       });
       if (!response.ok) {
+        if (response.status === 401) {
+          localStorage.removeItem("authToken");
+          localStorage.removeItem("activeUser");
+          localStorage.removeItem("user");
+          throw new Error("Session expired. Please login again.");
+        }
         const errorData = await response.json();
         throw new Error(errorData.error || "Failed to create booking");
       }
@@ -303,7 +309,10 @@ const TheatreSeats = () => {
                   });
                 } catch (error) {
                   console.error("Error creating booking:", error);
-                  alert("Error saving booking data: " + error.message);
+                  alert(error.message);
+                  if (error.message.includes("login") || error.message.includes("Session expired")) {
+                    navigate("/login");
+                  }
                 }
               }
             }}>

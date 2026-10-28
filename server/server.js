@@ -1,7 +1,7 @@
+import "dotenv/config";
 import express from "express";
 import cors from "cors";
 import mongodb from "mongodb";
-import dotenv from "dotenv";
 import { createServer } from "http";
 import { Server } from "socket.io";
 
@@ -12,7 +12,6 @@ import { setupDataRoutes } from "./routes/dataRoutes.js";
 import { setupUploadRoutes } from "./routes/uploadRoutes.js";
 import { setupEmailRoutes } from "./routes/emailRoutes.js";
 
-dotenv.config();
 const app = express();
 const server = createServer(app);
 

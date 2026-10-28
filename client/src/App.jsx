@@ -36,7 +36,7 @@ const App = () => {
       <div>
         <Header onClick={() => setSidebarOpen(!sidebarOpen)} />
         <div className="flex">
-          {sidebarOpen && <Sidebar />}
+          {sidebarOpen && <Sidebar onClose={() => setSidebarOpen(false)} />}
           <div className={sidebarOpen ? "ml-[15vw] w-[85vw]" : "w-full"}>
             <Routes>
               <Route path="/" element={<Home />} />
